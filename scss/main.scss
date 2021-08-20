@@ -8,7 +8,7 @@
 /* Navigation Bar */
 
 nav#navigation {
-
+    @include flexContainerStyles(column, wrap, center, center);
     @include positionStyles(fixed);
     @include widthStyles(100%);
     @include colorStyles($colorSecond, null);
@@ -19,7 +19,6 @@ nav#navigation {
 
         div#nav-logo-container {
             padding-top: 15px;
-            // border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         div#nav-links-container {
@@ -42,17 +41,40 @@ nav#navigation {
                             color: $colorThird;
                         }
                 }
-          
-                a#cta {
-                    @include borderStyles(null, 0, null);
-                    @include fontStyles($fontNavLinks, bold, 13px);
-                    @include textStyles(1.5px, auto, uppercase, null);
-                    margin-left: 100px;
-                    font-weight: bold;
-                    @include colorStyles($colorMain, $colorSecond);
+
+        }
+    
+}
+
+/* Collapsed Navigation Bar (via JavaScript) */
+
+nav#navigation-collapsed {
+    @include flexContainerStyles(row, wrap, space-between, stretch);
+    @include positionStyles(fixed);
+    @include widthStyles(100%);
+    @include colorStyles($colorSecond, null);
+
+        div#nav-logo-container-collapsed {
+            padding-top: 0;
+        }
+
+        div#nav-links-container {
+        
+                a {
+                    @include displayStyles(inline-block);
+                    @include marginStyles(5px);
+                    @include paddingStyles(10px);
+                    @include borderStyles(null, 4px, null);
+                    @include fontStyles($fontNavLinks, bold, 11px);
+                    @include textStyles(1px, auto, uppercase, null);
+                    @include colorStyles(null, $colorMain);
+
+                        sup {
+                            @include colorStyles(null, $colorThird);
+                        }
 
                         &:hover {
-                            @include colorStyles($colorThird, $colorSecond);
+                            color: $colorThird;
                         }
                 }
 
@@ -78,7 +100,7 @@ section#page-banner {
             }
 
             p {
-                width: 50%;
+                width: 40%;
                 @include colorStyles(null, $colorOnBlack);
             }
 

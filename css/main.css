@@ -9,12 +9,17 @@
   font-family: "David";
   font-display: block;
 }
+@font-face {
+  src: url(../fonts/Assistant-Light.ttf) format("truetype");
+  font-family: "Assistant Light";
+  font-display: block;
+}
 /* Universal selector, body tag */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Aileron Light", sans-serif;
+  font-family: "Assistant Light", sans-serif;
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -30,7 +35,7 @@ img {
 }
 
 p {
-  font-family: "Aileron Light", sans-serif;
+  font-family: "Assistant Light", sans-serif;
   font-weight: normal;
   font-size: 18px;
   letter-spacing: 0.5px;
@@ -71,10 +76,10 @@ small {
 
 .banner-text {
   margin: 5px 5px 5px 150px;
-  font-family: "Aileron Light", sans-serif;
+  font-family: "Assistant Light", sans-serif;
   font-weight: normal;
-  font-size: 20px;
-  letter-spacing: 1px;
+  font-size: 17px;
+  letter-spacing: 0.5px;
   line-height: 30px;
 }
 
@@ -125,6 +130,10 @@ small {
 
 /* Navigation Bar */
 nav#navigation {
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -160,22 +169,41 @@ nav#navigation div#nav-links-container a sup {
 nav#navigation div#nav-links-container a:hover {
   color: red;
 }
-nav#navigation div#nav-links-container a#cta {
-  border-radius: 0;
+
+/* Collapsed Navigation Bar (via JavaScript) */
+nav#navigation-collapsed {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+}
+nav#navigation-collapsed div#nav-logo-container-collapsed {
+  padding-top: 0;
+}
+nav#navigation-collapsed div#nav-links-container a {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 4px;
   font-family: "Gilroy Light", sans-serif;
   font-weight: bold;
-  font-size: 13px;
-  letter-spacing: 1.5px;
+  font-size: 11px;
+  letter-spacing: 1px;
   line-height: auto;
   text-transform: uppercase;
-  margin-left: 100px;
-  font-weight: bold;
-  background-color: white;
-  color: black;
+  color: white;
 }
-nav#navigation div#nav-links-container a#cta:hover {
-  background-color: red;
-  color: black;
+nav#navigation-collapsed div#nav-links-container a sup {
+  color: red;
+}
+nav#navigation-collapsed div#nav-links-container a:hover {
+  color: red;
 }
 
 /* Page Banner Section */
@@ -192,7 +220,7 @@ section#page-banner div h1 {
   color: white;
 }
 section#page-banner div p {
-  width: 50%;
+  width: 40%;
   color: #eee;
 }
 
@@ -537,7 +565,7 @@ footer nav#footer-nav div.column a {
   display: block;
   margin: 15px 0;
   padding: 0;
-  font-family: "Aileron Light", sans-serif;
+  font-family: "Assistant Light", sans-serif;
   font-weight: normal;
   font-size: 14px;
   letter-spacing: 0.5px;
@@ -588,7 +616,7 @@ footer div#footer-logo-container img {
 }
 footer p#copyright {
   margin: 2px 0 0 0;
-  font-family: "Aileron Light", sans-serif;
+  font-family: "Assistant Light", sans-serif;
   font-weight: normal;
   font-size: 12px;
   letter-spacing: 0.5px;
