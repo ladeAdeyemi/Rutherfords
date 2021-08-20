@@ -1,0 +1,106 @@
+                                        // +=+=+=+=+=+ GENERAL STYLES +=+=+=+=+=+ //
+
+// These classes are meant to be shared across all your projects. If you're finding it hard to figure out why your HTML elements aren't being styled the way you want don't forget to check the other modules.
+
+@import "variables";
+@import "mixins";
+
+/* Universal selector, body tag */
+
+* {
+    @include universalStyles;
+  }
+  
+body {
+    @include colorStyles(black, $colorOnBlack);
+}
+
+img {
+    display: block;
+    @include widthStyles(100%);
+}
+
+p {
+    @include fontStyles($fontParagraphs, normal, 18px);
+    @include textStyles(0.5px, 28px, null, null);
+    @include colorStyles(null, $colorOnWhite);
+}
+
+small {
+    @include displayStyles(block);
+}
+
+/* General Use Classes */
+
+.align-c {
+    text-align: center;
+}
+
+.align-l {
+    text-align: left;
+}
+
+.align-r {
+    text-align: right;
+}
+
+.banner {
+    @include widthStyles(100%);
+}
+
+.banner-headline {
+    @include marginStyles(150px 0 20px 150px);
+    @include fontStyles($fontHeadings, normal, 65px);
+    @include textStyles($headlines, 55px, auto, null);
+}
+
+.banner-text {
+    @include marginStyles(5px 5px 5px 150px);
+    // @include paddingStyles(10px);
+    @include fontStyles($fontParagraphs, normal, 20px);
+    @include textStyles(1px, 30px, null, null);
+}
+
+.cta {
+    @include marginStyles(10px auto);
+    @include paddingStyles(10px); 
+    @include fontStyles($fontSubheadings, bold, 16px);
+    @include textStyles(0.5px, 25px, uppercase, none);
+}
+
+.collapsed {
+    height: 0;
+}
+
+.flex {
+    // -webkit-box-flex: flex;
+    // -moz-box-flex: flex;
+    // -ms-flex: flex;
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.hidden {
+    visibility: none;
+}
+
+.list-item {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.on-black {
+    @include colorStyles(null, $colorOnBlack);
+}
+
+.on-white {
+    @include colorStyles(null, $colorOnWhite);
+}
+
+.rule {
+    @include displayStyles(block);
+}
+
