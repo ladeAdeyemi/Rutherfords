@@ -12,7 +12,7 @@
   }
   
 body {
-    @include colorStyles(black, $colorOnBlack);
+    @include colorStyles(black, null);
 }
 
 img {
@@ -56,15 +56,15 @@ small {
 
 .banner-text {
     @include marginStyles(5px 5px 5px 150px);
-    @include fontStyles($fontParagraphs, normal, 17px);
-    @include textStyles(0.5px, 30px, null, null);
+    @include fontStyles($fontParagraphs, normal, 18px);
+    @include textStyles(0.2px, 30px, null, null);
 }
 
 .cta {
     @include marginStyles(10px auto);
     @include paddingStyles(10px); 
-    @include fontStyles($fontSubheadings, bold, 16px);
-    @include textStyles(0.5px, 25px, uppercase, none);
+    @include fontStyles($fontNavLinks, normal, 13.5px);
+    @include textStyles(1px, 25px, uppercase, none);
 }
 
 .collapsed {

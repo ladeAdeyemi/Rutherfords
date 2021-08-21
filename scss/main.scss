@@ -11,25 +11,29 @@ nav#navigation {
     @include flexContainerStyles(column, wrap, center, center);
     @include positionStyles(fixed);
     @include widthStyles(100%);
+    // border-bottom: 1px solid rgba(211, 207, 207, 0.3);
     @include colorStyles($colorSecond, null);
 
-        div#nav-logo-container, div#nav-links-container {
-            @include flexContainerStyles(row, wrap, center, center);
-        }
+        // div#nav-logo-container {
+        //     @include flexContainerStyles(row, wrap, center, center);
+        // }
 
         div#nav-logo-container {
             padding-top: 15px;
+            @include transitionStyles(0.7s ease-in-out);
         }
 
         div#nav-links-container {
-            // border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+            @include flexContainerStyles(row, wrap, space-between, center);
+            // border-top: 1px solid grey;
+            // border-bottom: 1px solid grey;
         
                 a {
                     @include displayStyles(inline-block);
                     @include marginStyles(5px);
                     @include paddingStyles(10px);
-                    @include borderStyles(null, 4px, null);
-                    @include fontStyles($fontNavLinks, bold, 11px);
+                    @include fontStyles($fontNavLinks, bold, 10.5px);
                     @include textStyles(1px, auto, uppercase, null);
                     @include colorStyles(null, $colorMain);
 
@@ -38,7 +42,8 @@ nav#navigation {
                         }
 
                         &:hover {
-                            color: $colorThird;
+                            // color: $colorThird;
+                            opacity: 0.3;
                         }
                 }
 
@@ -49,13 +54,15 @@ nav#navigation {
 /* Collapsed Navigation Bar (via JavaScript) */
 
 nav#navigation-collapsed {
-    @include flexContainerStyles(row, wrap, space-between, stretch);
+    @include flexContainerStyles(row, wrap, space-around, stretch);
     @include positionStyles(fixed);
     @include widthStyles(100%);
+    // border-bottom: 1px solid rgba(211, 207, 207, 0.3);
     @include colorStyles($colorSecond, null);
 
-        div#nav-logo-container-collapsed {
+        div#nav-logo-container {
             padding-top: 0;
+            @include transitionStyles(0.3s ease-in-out);
         }
 
         div#nav-links-container {
@@ -65,7 +72,7 @@ nav#navigation-collapsed {
                     @include marginStyles(5px);
                     @include paddingStyles(10px);
                     @include borderStyles(null, 4px, null);
-                    @include fontStyles($fontNavLinks, bold, 11px);
+                    @include fontStyles($fontNavLinks, bold, 10.5px);
                     @include textStyles(1px, auto, uppercase, null);
                     @include colorStyles(null, $colorMain);
 
@@ -74,7 +81,7 @@ nav#navigation-collapsed {
                         }
 
                         &:hover {
-                            color: $colorThird;
+                            opacity: 0.3;
                         }
                 }
 
@@ -89,7 +96,8 @@ section#page-banner {
     @include marginStyles(60px 0 0 0);
     @include paddingStyles(50px 10px 150px 10px);
     // @include gridContainerStyles($cols, $rows);
-    @include bgImageStyles(url(../images/mathew.jpg), no-repeat, center, cover, scroll);
+    @include bgImageStyles(url(../images/racoon.jpg), no-repeat, center, cover, scroll);
+    height:700px;
 
     div {
 
@@ -100,7 +108,7 @@ section#page-banner {
             }
 
             p {
-                width: 40%;
+                width: 45%;
                 @include colorStyles(null, $colorOnBlack);
             }
 
@@ -108,22 +116,26 @@ section#page-banner {
 
 }
 
-/* Solutions  */
+/* Craftsmanship  */
 
-section#solutions {
+section#craftsmanship {
 
-    @include paddingStyles(50px 0 100px 0);
+    @include paddingStyles(90px 0 300px 0);
+    @include colorStyles($colorMain, null);
 
         h2 {
             @include marginStyles(40px 0 20px 0); 
-            @include fontStyles($fontHeadings, normal, 43px); 
+            @include fontStyles($fontHeadings, normal, 50px); 
             @include textStyles($headlines, inherit, null, null);
-            @include colorStyles(null, $colorMain); 
+            @include colorStyles(null, $colorSecond); 
         }
 
         p {
             @include marginStyles(20px auto);
+            margin-bottom: 40px;
             @include widthStyles(70%);
+            @include fontStyles($fontParagraphs, normal, 17.5px); 
+            @include textStyles(0.2px, 30px, null, null);
         }
 
         div {
@@ -131,15 +143,17 @@ section#solutions {
         }
 
         div.card {      
-            @include marginStyles(20px);
-            @include widthStyles(35%); 
-            @include borderStyles(null, 0, null);
+            @include marginStyles(10px 20px);
+            @include widthStyles(20%); 
+            // @include borderStyles(1px solid grey, null, null);
             @include colorStyles(null, null); 
 
-                h3 {
-                    @include marginStyles(10px auto);
-                    @include fontStyles($fontHeadings, normal, 18px);
-                    @include textStyles(0.2px, 30px, null, null);
+                p {
+                    @include marginStyles(5px);
+                    // @include paddingStyles(2px);
+                    @include widthStyles(100%);
+                    @include fontStyles($fontParagraphs, normal, 16px);
+                    @include textStyles(0.2px, 22px, null, null);
                     @include colorStyles(null, $colorOnWhite);
                 }
         }
@@ -157,276 +171,74 @@ section#solutions {
 
 }
 
-/* Stats*/
+/* Case Study */
 
-section#stats {
+section#study {
 
-    div.container_outer {
+    @include flexContainerStyles(column, wrap, center, center);
+    background-color: $colorSecond;
+    overflow: visible;
 
-        @include paddingStyles(40px 0);
-        @include flexContainerStyles(row, wrap, center, center);
-        border-top: 1px solid lightgrey; 
-        border-bottom: 1px solid lightgrey;
-        box-shadow: $solutions;
-
-            div.container_inner {
-                @include paddingStyles(10px); 
-                width: 45%;
-
-                h2, span {
-                    @include marginStyles(20px auto); 
-                    @include paddingStyles(5px); 
-                    @include textStyles($headlines, inherit, null, null);
-                }
-
-                h2 {
-                    @include fontStyles($fontHeadings, normal, 40px); 
-                    @include colorStyles(null, $colorMain); 
-                }
-
-                // img {
-                //     height: 30px;
-                // }
-
-                span {
-                    @include displayStyles(inline-block);
-                    @include paddingStyles(20px); 
-                    border: 4px solid $colorMain;
-                    border-radius: 50%;
-                    @include fontStyles($fontHeadings, bold, 60px);
-                    @include colorStyles($colorSecond, $colorMain);
-                    // @include boxShadowStyles(1px 1px 12px 2px grey);
-                }
-
-                p {
-                    @include marginStyles(40px); 
-                    @include paddingStyles(5px);
-                    min-width: 350px;
-                    @include fontStyles('Source Sans Pro Light', null, 30px); 
-                    letter-spacing: -0.5px;
-                    @include colorStyles(null, #2f2b2b); 
-                }
-
-                small {
-                    @include marginStyles(10px); 
-                }
-
-            }
-
-            div.container_inner.flex {
-                @include flexContainerStyles(column, wrap, center, center); 
-
-                    div.flex {
-                        @include flexContainerStyles(row, wrap, space-between, center);
-                    }
-            }
-
-    }
-       
-}
-
-/* Carousel  */
-
-section#carousel {
-
-    @include paddingStyles(100px 0);
-
-        div {
-            @include flexContainerStyles(row, wrap, center, stretch);
-        }
-
-        div.carousel-btn-l, div.carousel-btn-r {
-            display: inline-block;
-            padding: 10px;
-            position: relative;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            transition: 0.5s ease-in-out;
-
-                &:hover {
-                    @include colorStyles($colorSecond, null);
-                    box-shadow:$boxShadowSpread;
-                }
-        }
-
-        div.carousel-btn-l {
-            left: 40px;
-            top: 180px;
-        }
-
-        div.carousel-btn-r {
-            left: 1240px;
-            bottom: 200px;
-        }
-
-        div.card {      
-            @include marginStyles(20px);
-            @include widthStyles($c4); 
-            @include borderStyles(null, 0, null);
-            @include colorStyles($colorSecond, null); 
-            @include boxShadowStyles($boxShadowDark);
-
-                h3 {
-                    @include marginStyles(5px auto);
-                    @include fontStyles($fontHeadings, normal, 20px);
-                    @include textStyles(0.2px, 30px, null, null);
-                    @include colorStyles(null, $colorOnWhite);
-                }
-
-        }
-
-}
-
-/* Threat Report */
-
-section#report {
-
-    @include flexContainerStyles(row, wrap, space-evenly, stretch);
-    background-color: $colorThird;
-
-        div.container_text, div.container_img {
-            @include marginStyles(0);
-            @include widthStyles(50%);
-        }
-
-        div.container_text {
+        div.container_outer {
 
             @include flexContainerStyles(column, wrap, center, center);
-            @include paddingStyles(150px 0 130px 0);
-          
-                h2 {
-                    @include marginStyles(10px auto);
-                    @include fontStyles($fontHeadings, normal, 40px);
-                    @include textStyles($headlines, 40px, null, null);
-                    @include colorStyles(null, $colorSecond);
+            width: 100%;
+            position: relative;
+            bottom: 200px;
+
+                div.container_text, div.container_img {
+                    @include marginStyles(0);
+                    @include widthStyles(80%);
                 }
-
-                hr {
-                    @include hrStyles(20px auto, 90%, 1px solid rgba(255, 255, 255, 0.5));
-                }
-
-                p {
-                    @include marginStyles(25px auto);
-                    @include paddingStyles(0 30px);
-                    @include colorStyles(null, $colorSecond);
-                }
-
-                a {
-                    @include borderStyles(1px solid $colorSecond, 0, none);
-                    @include colorStyles(null, $colorSecond);
-               
-                        &:hover {
-                            @include colorStyles($colorSecond, $colorThird);
-                        }
-                }
-
-        }
-
-        div.container_img {
-
-            img {
-                @include heightStyles(100%);
-            }
-
-        }
-               
-}
-
-/* Trusted By */
-
-section#trusted {
-
-    padding: 40px;
-
-        h2 {
-            @include marginStyles(10px auto); 
-            @include fontStyles($fontHeadings, normal, 40px); 
-            @include textStyles($headlines, inherit, null, null);
-            @include colorStyles(null, $colorMain); 
-        }
-
-        p {
-            @include marginStyles(10px auto);
-            margin-bottom: 0;
-        }
-
-        // hr {
-        //     margin: 35px auto;
-        //     margin-bottom: 0;
-        //     width: 90%;
-        // }
-
-        ul {
-            @include flexContainerStyles(row, wrap, space-evenly, stretch); 
-            @include marginStyles(0 auto); 
-            @include paddingStyles(0); 
-
-                li {
-                    @include marginStyles(5px); 
-                    @include paddingStyles(0 20px);
-                    @include widthStyles(15%);  
-                }
-        }
-}
-
-/* Other Banner */
-
-section#other-banner {
-        @include bgImageStyles(url(../images/rain.jpg), no-repeat, center, cover, scroll);
-        width: 100%;
-        height: 700px;
-}
-
-/* Try Alita */
-
-section#try {
-    padding: 40px;
-
-        div#sign-up-container {
-
-            h3 {
-                @include marginStyles(10px auto); 
-                @include fontStyles($fontHeadings, normal, 40px); 
-                @include textStyles($headlines, inherit, null, null);
-                @include colorStyles(null, $colorMain);   
-            }
-
-            p {
-                @include marginStyles(20px auto);
-                margin-top: 5px;
-            }
-
-            form {
-                @include flexContainerStyles(row, wrap, center, center); 
-                margin: 10px auto;
-
-                    input {
-                        padding: 12px;
-                        border: 1px solid $colorFinal;
-                        border-radius: 0;
-                        width: 60%;
-                        font-size: 18px;
-                        outline: none;
-
-                        &:focus {
-                            border: 1px solid $colorMain;
-                        }
+        
+                div.container_img {
+                    
+                    // @include widthStyles(60%);
+        
+                    img {
+                        @include widthStyles(100%);
+                        // @include heightStyles(100%);
                     }
-
-                    button {
-                        margin-left: 5px;
-                        padding: 16.5px;
-                        border: none;
-                        font-family: $fontHeadings;
-                        font-size: 14px;
-                        letter-spacing: 1px;
-                        text-transform: uppercase;
-                        @include colorStyles($colorMain, $colorSecond);  
-                    }
-            }
-
+        
+                }
+        
+                div.container_text {
+        
+                    @include flexContainerStyles(column, wrap, center, center);
+                    @include paddingStyles(50px auto);
+                    padding-bottom: 40px;
+                    // background-color: $colorMain;
+                    // position: relative;
+                    // bottom: 200px;
+                
+                        h2 {
+                            @include marginStyles(30px auto);
+                            margin-bottom: 0;
+                            @include fontStyles($fontHeadings, normal, 50px);
+                            @include textStyles($headlines, 50px, null, null);
+                            @include colorStyles(null, $colorMain);
+                        }
+        
+                        p {
+                            @include marginStyles(10px auto);
+                            @include paddingStyles(0 30px);
+                            width: 100%;
+                            @include textStyles(0.2px, 30px, null, null);
+                        }
+        
+                        a {
+                            @include borderStyles(1px solid $colorMain, 0, none);
+                            @include colorStyles(null, $colorMain);
+                    
+                                &:hover {
+                                    @include colorStyles($colorMain, $colorSecond);
+                                }
+                        }
+        
+                }
+                
         }
+    
 }
 
 /* Footer */
@@ -434,40 +246,64 @@ section#try {
 footer {
     @include paddingStyles(50px 0 80px 0);
     @include colorStyles($colorSecond, $colorMain);
+    border-top: 1px solid rgba(211, 207, 207, 0.2);
 
         nav#footer-nav {
             @include marginStyles(0 auto);
-            @include flexContainerStyles(row, wrap, center, stretch);
+            @include flexContainerStyles(row, wrap, space-evenly, center);
             @include marginStyles(0 auto);
              
+                div#social {
+
+                    @include flexContainerStyles(column, wrap, space-around, center);
+                    
+                        div#copyright {
+
+                            p {
+                                @include marginStyles(2px 0 0 0); 
+                                @include fontStyles($fontNavLinks, normal, 12px);
+                                @include textStyles(0.5px, inherit, null, null);
+                                @include colorStyles(null, $colorOnBlack); 
+                                align-self: center;
+                            }
+        
+                        }
+                        
+                        div.social-media-container {
+                            @include flexContainerStyles(row, wrap, space-around, center);
+                            margin-bottom: 0;
+
+                                a {
+                                    display: inline-block;
+                                    margin: 40px;
+                                }
+
+                        }
+
+                }
+
                  div.column {
                      @include displayStyles(inline-block);
+                    //  @include flexContainerStyles(column, wrap, flex-end, flex-start);
                      @include marginStyles(10px 60px);
                      @include paddingStyles(0);
-                     @include widthStyles(150px);
+                    //  @include widthStyles(150px);
 
                         &:nth-child(4) {
                             margin-right: 0;
                         }
-
-                        h4 {
-                            @include displayStyles(block);
-                            @include marginStyles(20px 0);
-                            @include fontStyles($fontHeadings, bold, 16px);
-                            @include textStyles(1px, inherit, uppercase, none);
-                            @include colorStyles(none, $colorMain);
-                        }
             
                         a {
                             @include displayStyles(block);
-                            @include marginStyles(15px 0);
+                            @include marginStyles(5px 45px);
                             @include paddingStyles(0);
-                            @include fontStyles($fontParagraphs, normal, 14px);
-                            @include textStyles(0.5px, inherit, none, none);
-                            @include colorStyles(none, $colorOnWhite);
+                            @include fontStyles($fontNavLinks, normal, 18px);
+                            @include textStyles(0.5px, inherit, null, null);
+                            @include colorStyles(null, $colorMain);
                             @include transitionStyles(0.3s ease-in-out);
 
                                 &:hover {
+                                    // opacity: 0.5;
                                     text-decoration: underline;
                                 }
             
@@ -487,39 +323,6 @@ footer {
         
                  }
                  
-        }
-
-        hr {
-            @include hrStyles(20px auto, 90%, 1px solid $colorMain);
-        }
-
-        div#social {
-
-            @include flexContainerStyles(row, wrap, space-around, stretch);
-
-                div#social-media-container {
-                    align-self: center;
-        
-                        a {
-                            @include displayStyles(inline-block);
-                            @include marginStyles(0 10px 0 10px); 
-                            @include paddingStyles(5px); 
-                            @include colorStyles(none, none); 
-                        }
-                }
-        }
-
-        div#footer-logo-container img {
-            @include displayStyles(block);
-            @include marginStyles(0 auto); 
-        }
-
-        p#copyright {
-            @include marginStyles(2px 0 0 0); 
-            @include fontStyles($fontParagraphs, normal, 12px);
-            @include textStyles(0.5px, inherit, none, none);
-            @include colorStyles(none, $colorOnWhite); 
-            align-self: center;
         }
 
 }
