@@ -83,6 +83,7 @@ small {
 }
 
 .cta {
+  display: block;
   margin: 10px auto;
   padding: 10px;
   font-family: "Assistant Light", sans-serif;
@@ -98,12 +99,45 @@ small {
   height: 0;
 }
 
-.flex {
+.flex-cl {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.flex-rw {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .grid {
   display: grid;
+}
+
+.heading-l {
+  font-family: "David", serif;
+  font-weight: normal;
+  font-size: 55px;
+  letter-spacing: -0.5px;
+  line-height: inherit;
+}
+
+.heading-m {
+  font-family: "David", serif;
+  font-weight: normal;
+  font-size: 50px;
+  letter-spacing: -0.5px;
+  line-height: inherit;
+}
+
+.heading-s {
+  margin: 10px auto;
+  font-family: "David", serif;
+  font-weight: normal;
+  font-size: 35px;
+  letter-spacing: -0.5px;
+  line-height: 40px;
 }
 
 .hidden {
@@ -129,8 +163,6 @@ small {
 
 /* Navigation Bar */
 nav#navigation {
-  flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -145,8 +177,6 @@ nav#navigation div#nav-logo-container {
   transition: 0.7s ease-in-out;
 }
 nav#navigation div#nav-links-container {
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -184,7 +214,7 @@ nav#navigation-collapsed {
 }
 nav#navigation-collapsed div#nav-logo-container {
   padding-top: 0;
-  transition: 0.3s ease-in-out;
+  transition: 0.7s ease-in-out;
 }
 nav#navigation-collapsed div#nav-links-container a {
   display: inline-block;
@@ -227,21 +257,16 @@ section#page-banner div p {
 
 /* Craftsmanship  */
 section#craftsmanship {
-  padding: 90px 0 300px 0;
+  padding: 70px 0 100px 0;
   background-color: white;
 }
 section#craftsmanship h2 {
   margin: 40px 0 20px 0;
-  font-family: "David", serif;
-  font-weight: normal;
-  font-size: 50px;
-  letter-spacing: -0.5px;
-  line-height: inherit;
   color: black;
 }
 section#craftsmanship p {
-  margin: 20px auto;
-  margin-bottom: 40px;
+  margin: 10px auto;
+  margin-bottom: 30px;
   width: 70%;
   font-family: "Assistant", sans-serif;
   font-weight: normal;
@@ -250,93 +275,88 @@ section#craftsmanship p {
   line-height: 30px;
 }
 section#craftsmanship div {
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
 }
 section#craftsmanship div.card {
   margin: 10px 20px;
-  width: 20%;
+  padding: 10px;
+  width: 35%;
+}
+section#craftsmanship div.card:nth-child(even) {
+  position: relative;
+  top: 150px;
 }
 section#craftsmanship div.card p {
   margin: 5px;
+  padding: 5px;
   width: 100%;
-  font-family: "Assistant", sans-serif;
-  font-weight: normal;
   font-size: 16px;
-  letter-spacing: 0.2px;
   line-height: 22px;
   color: #525a5a;
 }
-section#craftsmanship a {
-  display: inline-block;
-  margin: 10px auto;
-  font-weight: normal;
-  background-color: white;
-  color: black;
+section#craftsmanship h2.heading-l.pad {
+  margin: 200px 0 100px 0;
+  padding-right: 200px;
 }
-section#craftsmanship a:hover {
-  background-color: red;
+
+/* Padding */
+section#pad {
+  background-image: url(../images/taxidermy-175182_1920.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  margin-bottom: 400px;
+  height: 700px;
 }
 
 /* Case Study */
 section#study {
-  flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-color: black;
   overflow: visible;
 }
 section#study div.container_outer {
-  flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
   position: relative;
   bottom: 200px;
 }
-section#study div.container_outer div.container_text, section#study div.container_outer div.container_img {
+section#study div.container_outer div.container_txt, section#study div.container_outer div.container_img {
   margin: 0;
   width: 80%;
 }
 section#study div.container_outer div.container_img img {
   width: 100%;
 }
-section#study div.container_outer div.container_text {
-  flex-direction: column;
-  flex-wrap: wrap;
+section#study div.container_outer div.container_txt {
   justify-content: center;
   align-items: center;
   padding: 50px auto;
   padding-bottom: 40px;
 }
-section#study div.container_outer div.container_text h2 {
+section#study div.container_outer div.container_txt h2 {
   margin: 30px auto;
   margin-bottom: 0;
-  font-family: "David", serif;
-  font-weight: normal;
-  font-size: 50px;
-  letter-spacing: -0.5px;
-  line-height: 50px;
   color: white;
 }
-section#study div.container_outer div.container_text p {
+section#study div.container_outer div.container_txt p {
   margin: 10px auto;
   padding: 0 30px;
   width: 100%;
   letter-spacing: 0.2px;
   line-height: 30px;
 }
-section#study div.container_outer div.container_text a {
+section#study div.container_outer div.container_txt a {
   border: 1px solid white;
   border-radius: 0;
   outline: none;
   color: white;
 }
-section#study div.container_outer div.container_text a:hover {
+section#study div.container_outer div.container_txt a:hover {
   background-color: white;
   color: black;
 }
@@ -350,15 +370,11 @@ footer {
 }
 footer nav#footer-nav {
   margin: 0 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   margin: 0 auto;
 }
 footer nav#footer-nav div#social {
-  flex-direction: column;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -373,8 +389,6 @@ footer nav#footer-nav div#social div#copyright p {
   align-self: center;
 }
 footer nav#footer-nav div#social div.social-media-container {
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 0;
@@ -404,7 +418,11 @@ footer nav#footer-nav div.column a {
   transition: 0.3s ease-in-out;
 }
 footer nav#footer-nav div.column a:hover {
-  text-decoration: underline;
+  opacity: 0.5;
+}
+footer nav#footer-nav div.column a small {
+  margin-top: 30px;
+  color: grey;
 }
 footer nav#footer-nav div.column a sup {
   font-size: 8px;
@@ -429,8 +447,6 @@ footer nav#footer-nav div.column a span {
   }
 
   section#try div#sign-up-container form {
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 10px auto;
@@ -453,8 +469,6 @@ footer nav#footer-nav div.column a span {
   }
 
   footer div#social {
-    flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
@@ -473,7 +487,6 @@ footer nav#footer-nav div.column a span {
 @media screen and (max-width: 789px) {
   section#try div#sign-up-container form {
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 10px auto;
@@ -484,8 +497,6 @@ footer nav#footer-nav div.column a span {
 }
 @media screen and (max-width: 589px) {
   section#try div#sign-up-container form {
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 10px auto;

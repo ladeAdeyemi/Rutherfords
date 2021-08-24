@@ -8,7 +8,7 @@
 /* Navigation Bar */
 
 nav#navigation {
-    @include flexContainerStyles(column, wrap, center, center);
+    @include flexContainerStyles(center, center);
     @include positionStyles(fixed);
     @include widthStyles(100%);
     // border-bottom: 1px solid rgba(211, 207, 207, 0.3);
@@ -25,7 +25,7 @@ nav#navigation {
 
         div#nav-links-container {
 
-            @include flexContainerStyles(row, wrap, space-between, center);
+            @include flexContainerStyles(space-between, center);
             // border-top: 1px solid grey;
             // border-bottom: 1px solid grey;
         
@@ -42,7 +42,6 @@ nav#navigation {
                         }
 
                         &:hover {
-                            // color: $colorThird;
                             opacity: 0.3;
                         }
                 }
@@ -54,7 +53,9 @@ nav#navigation {
 /* Collapsed Navigation Bar (via JavaScript) */
 
 nav#navigation-collapsed {
-    @include flexContainerStyles(row, wrap, space-around, stretch);
+    flex-direction: row;
+    flex-wrap:wrap;
+    @include flexContainerStyles(space-around, stretch);
     @include positionStyles(fixed);
     @include widthStyles(100%);
     // border-bottom: 1px solid rgba(211, 207, 207, 0.3);
@@ -62,7 +63,7 @@ nav#navigation-collapsed {
 
         div#nav-logo-container {
             padding-top: 0;
-            @include transitionStyles(0.3s ease-in-out);
+            @include transitionStyles(0.7s ease-in-out);
         }
 
         div#nav-links-container {
@@ -119,74 +120,83 @@ section#page-banner {
 /* Craftsmanship  */
 
 section#craftsmanship {
-
-    @include paddingStyles(90px 0 300px 0);
+    // @include bgImageStyles(url(../images/pattern-01.png), repeat-x, center, null, scroll);
+    @include paddingStyles(70px 0 100px 0);
     @include colorStyles($colorMain, null);
 
         h2 {
             @include marginStyles(40px 0 20px 0); 
-            @include fontStyles($fontHeadings, normal, 50px); 
-            @include textStyles($headlines, inherit, null, null);
             @include colorStyles(null, $colorSecond); 
         }
 
         p {
-            @include marginStyles(20px auto);
-            margin-bottom: 40px;
+            @include marginStyles(10px auto);
+            margin-bottom: 30px;
             @include widthStyles(70%);
             @include fontStyles($fontParagraphs, normal, 17.5px); 
             @include textStyles(0.2px, 30px, null, null);
         }
 
         div {
-            @include flexContainerStyles(row, wrap, center, stretch);
+            @include flexContainerStyles(center, center);
         }
 
         div.card {      
             @include marginStyles(10px 20px);
-            @include widthStyles(20%); 
-            // @include borderStyles(1px solid grey, null, null);
-            @include colorStyles(null, null); 
+            @include paddingStyles(10px);
+            @include widthStyles(35%); 
+            @include colorStyles(null, null);
+            
+                &:nth-child(even) {
+                    position: relative;
+                    top: 150px;
+                }
 
                 p {
                     @include marginStyles(5px);
-                    // @include paddingStyles(2px);
+                    @include paddingStyles(5px);
                     @include widthStyles(100%);
-                    @include fontStyles($fontParagraphs, normal, 16px);
-                    @include textStyles(0.2px, 22px, null, null);
+                    @include fontStyles(null, null, 16px);
+                    @include textStyles(null, 22px, null, null);
                     @include colorStyles(null, $colorOnWhite);
                 }
+
         }
 
-        a {
-            @include displayStyles(inline-block);
-            @include marginStyles(10px auto);
-            font-weight: normal;
-            @include colorStyles($colorMain, $colorSecond);
-
-                &:hover {
-                    @include colorStyles($colorThird, null);
-                }
+        h2.heading-l.pad {
+            margin: 200px 0 100px 0;
+            padding-right: 200px;
         }
 
 }
+
+
+/* Padding */
+
+section#pad {
+
+    @include bgImageStyles(url(../images/taxidermy-175182_1920.jpg), no-repeat, center, cover, scroll);
+    margin-bottom: 400px;
+    height: 700px;
+}
+
 
 /* Case Study */
 
 section#study {
 
-    @include flexContainerStyles(column, wrap, center, center);
+    @include flexContainerStyles(center, center);
     background-color: $colorSecond;
     overflow: visible;
 
         div.container_outer {
 
-            @include flexContainerStyles(column, wrap, center, center);
+            @include flexContainerStyles(center, center);
             width: 100%;
             position: relative;
             bottom: 200px;
 
-                div.container_text, div.container_img {
+                div.container_txt, div.container_img {
                     @include marginStyles(0);
                     @include widthStyles(80%);
                 }
@@ -197,14 +207,13 @@ section#study {
         
                     img {
                         @include widthStyles(100%);
-                        // @include heightStyles(100%);
                     }
         
                 }
         
-                div.container_text {
+                div.container_txt {
         
-                    @include flexContainerStyles(column, wrap, center, center);
+                    @include flexContainerStyles(center, center);
                     @include paddingStyles(50px auto);
                     padding-bottom: 40px;
                     // background-color: $colorMain;
@@ -214,8 +223,6 @@ section#study {
                         h2 {
                             @include marginStyles(30px auto);
                             margin-bottom: 0;
-                            @include fontStyles($fontHeadings, normal, 50px);
-                            @include textStyles($headlines, 50px, null, null);
                             @include colorStyles(null, $colorMain);
                         }
         
@@ -250,12 +257,12 @@ footer {
 
         nav#footer-nav {
             @include marginStyles(0 auto);
-            @include flexContainerStyles(row, wrap, space-evenly, center);
+            @include flexContainerStyles(space-evenly, center);
             @include marginStyles(0 auto);
              
                 div#social {
 
-                    @include flexContainerStyles(column, wrap, space-around, center);
+                    @include flexContainerStyles(space-around, center);
                     
                         div#copyright {
 
@@ -270,12 +277,13 @@ footer {
                         }
                         
                         div.social-media-container {
-                            @include flexContainerStyles(row, wrap, space-around, center);
+                            @include flexContainerStyles(space-around, center);
                             margin-bottom: 0;
 
                                 a {
                                     display: inline-block;
                                     margin: 40px;
+
                                 }
 
                         }
@@ -303,8 +311,13 @@ footer {
                             @include transitionStyles(0.3s ease-in-out);
 
                                 &:hover {
-                                    // opacity: 0.5;
-                                    text-decoration: underline;
+                                    opacity: 0.5;
+                                    // text-decoration: underline;
+                                }
+
+                                small {
+                                    margin-top: 30px;
+                                    color: grey;
                                 }
             
                                 sup {
@@ -352,7 +365,7 @@ footer {
         div#sign-up-container {
 
             form {
-                @include flexContainerStyles(row, wrap, center, center); 
+                @include flexContainerStyles(center, center); 
                 margin: 10px auto;
 
                     input {
@@ -385,7 +398,7 @@ footer {
     }
 
     footer div#social {
-        @include flexContainerStyles(column, wrap, center, center);
+        @include flexContainerStyles(center, center);
 
             div#social-media-container, div#footer-logo-container img, p#copyright {
                 @include marginStyles(5px auto);
@@ -411,7 +424,8 @@ footer {
             div#sign-up-container {
     
                 form {
-                    @include flexContainerStyles(row, wrap, center, center); 
+                    flex-direction: row;
+                    @include flexContainerStyles(center, center); 
                     margin: 10px auto;
     
                         input {
@@ -431,7 +445,7 @@ footer {
             div#sign-up-container {
     
                 form {
-                    @include flexContainerStyles(row, wrap, center, center); 
+                    @include flexContainerStyles(center, center); 
                     margin: 10px auto;
     
                         input {

@@ -61,6 +61,7 @@ small {
 }
 
 .cta {
+    @include displayStyles(block);
     @include marginStyles(10px auto);
     @include paddingStyles(10px); 
     @include fontStyles($fontNavLinks, normal, 13.5px);
@@ -71,15 +72,36 @@ small {
     height: 0;
 }
 
-.flex {
-    // -webkit-box-flex: flex;
-    // -moz-box-flex: flex;
-    // -ms-flex: flex;
+.flex-cl {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.flex-rw {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .grid {
     display: grid;
+}
+
+.heading-l {
+    @include fontStyles($fontHeadings, normal, 55px); 
+    @include textStyles($headlines, inherit, null, null);
+}
+
+.heading-m {
+    @include fontStyles($fontHeadings, normal, 50px); 
+    @include textStyles($headlines, inherit, null, null);
+}
+
+.heading-s {
+    @include marginStyles(10px auto);
+    @include fontStyles($fontHeadings, normal, 35px);
+    @include textStyles(-0.5px, 40px, null, null);
 }
 
 .hidden {
