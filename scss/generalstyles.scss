@@ -104,6 +104,12 @@ small {
     @include textStyles(-0.5px, 40px, null, null);
 }
 
+.heading-xl {
+    @include marginStyles(10px auto);
+    @include fontStyles($fontHeadings, normal, 60px);
+    @include textStyles(-0.5px, 60px, null, null);
+}
+
 .hidden {
     visibility: none;
 }
@@ -123,5 +129,6 @@ small {
 
 .rule {
     @include displayStyles(block);
+    border-bottom: none;
 }
 
