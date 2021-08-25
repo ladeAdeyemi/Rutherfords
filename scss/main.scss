@@ -33,7 +33,7 @@ nav#navigation {
                     @include displayStyles(inline-block);
                     @include marginStyles(5px);
                     @include paddingStyles(10px);
-                    @include fontStyles($fontNavLinks, bold, 10px);
+                    @include fontStyles($fontNavLinks, bold, 12px);
                     @include textStyles(1px, auto, uppercase, null);
                     @include colorStyles(null, $colorMain);
 
@@ -63,7 +63,7 @@ nav#navigation-collapsed {
 
         div#nav-logo-container {
             padding-top: 0;
-            @include transitionStyles(0.7s ease-in-out);
+            @include transitionStyles(0.5s ease-in-out);
         }
 
         div#nav-links-container {
@@ -73,7 +73,7 @@ nav#navigation-collapsed {
                     @include marginStyles(5px);
                     @include paddingStyles(10px);
                     @include borderStyles(null, 4px, null);
-                    @include fontStyles($fontNavLinks, bold, 10px);
+                    @include fontStyles($fontNavLinks, bold, 12px);
                     @include textStyles(1px, auto, uppercase, null);
                     @include colorStyles(null, $colorMain);
 
@@ -133,7 +133,7 @@ section#craftsmanship {
             @include marginStyles(10px auto);
             // margin-bottom: 30px;
             @include widthStyles(70%);
-            @include fontStyles($fontParagraphs, normal, 17.5px); 
+            @include fontStyles($fontParagraphs, normal, 20px); 
             @include textStyles(0.2px, 30px, null, null);
         }
 
@@ -153,18 +153,13 @@ section#craftsmanship {
                     // top: 170px;
                 }
 
-                p {
-                    @include marginStyles(5px);
-                    @include paddingStyles(5px);
-                    @include widthStyles(100%);
-                    @include fontStyles(null, null, 16px);
-                    @include textStyles(null, 22px, null, null);
-                    @include colorStyles(null, $colorOnWhite);
+                img {
+                  border-radius: 8px;
                 }
 
         }
 
-        h2.heading-m.pad {
+        h2.heading-l.pad {
             margin: 150px 0 100px 0;
             padding-right: 20%;
             // padding-right: 300px;
@@ -203,7 +198,7 @@ section#history {
     }
 
     h2#bottom {
-        margin-top: 250px;
+        margin-top: 300px;
     }
 
 }
@@ -212,7 +207,7 @@ section#history {
 
 section#patreon {
 
-    padding: 50px 0 100px 0;
+    padding: 100px 0 150px 0;
     @include colorStyles($colorMain, null);
 
         div.flex-rw {
@@ -220,28 +215,39 @@ section#patreon {
             @include flexContainerStyles(space-evenly, center);
 
                 div.container_txt {
-                    width: 40%;
+                    width: 45%;
+
+                    h2, p {
+                        padding: 0 40px;
+                    }
 
                     h2 {
-                        margin: 20px auto;
+                        margin: 10px auto;
                     } 
+                    
+                    hr {
+                        margin: 30px auto;
+                        width: 85%;
+                    }
         
                     p {
+                        // padding: 0 20px;
                         @include textStyles(0.2px, 30px, null, null);
                     }
                 }
 
                 div.container_img {
                     @include flexContainerStyles(space-evenly, stretch);
-                    padding: 80px 0;
+                    // padding: 40px 0;
                     // border-left: 1px solid lightgrey;
-                    width: 60%;
+                    width: 55%;
                     // @include colorStyles(#eee, null);
 
                     div.card {
                         width: 40%;
 
                         img {
+                            border-radius: 8px;
                             width: 100%;
                         }
                     }
@@ -277,6 +283,7 @@ section#study {
                     // @include widthStyles(60%);
         
                     img {
+                        // border-radius: 8px;
                         @include widthStyles(100%);
                     }
         
@@ -296,7 +303,7 @@ section#study {
                             margin-bottom: 0;
                             @include colorStyles(null, $colorMain);
                         }
-        
+
                         p {
                             @include marginStyles(10px auto);
                             @include paddingStyles(0 30px);
@@ -322,14 +329,20 @@ section#study {
 /* Commission */
 
 section#commission {
-    padding-bottom: 200px;
+    padding-bottom: 50px;
+    @include colorStyles($colorMain, null);
 
         div#form-container {
             margin: 20px auto;
 
-                h2, p {
+                h2 {
                     margin-left: 15%;
                     margin-bottom: 20px;
+                }
+
+                h2 {
+                    padding-top: 120px;
+                    @include colorStyles(null, $colorSecond);
                 }
 
                 form {
@@ -344,18 +357,34 @@ section#commission {
 
                         input, textarea {
                             padding: 10px;
-                            background-color: $colorSecond;
-                            color: #eee;
+                            background-color: $colorMain;
+                            color: $colorSecond;
                         }
 
                         input {
                             border:none;
-                            border-bottom: 1px solid rgba(211, 207, 207, 0.7);
+                            border-bottom: 1px solid grey;
+                                &:focus {
+                                    border-bottom: 1px solid $colorSecond;
+                                }
+                        }
+
+                        textarea {
+                            border: 1px solid grey;
+                            &:focus {
+                                border: 1px solid $colorSecond;
+                            }
                         }
 
                         button {
                             padding: 10px;
+                            border: none;
+                            border-radius: 4px;
+                            letter-spacing: 8px;
                             text-transform: uppercase;
+                            background-color: $colorSecond;
+                            color: $colorMain;
+                            
                         }
                 }
 

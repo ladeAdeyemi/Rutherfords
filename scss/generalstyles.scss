@@ -10,6 +10,10 @@
 * {
     @include universalStyles;
   }
+
+html {
+      scroll-behavior: smooth;
+  }
   
 body {
     @include colorStyles(black, null);
@@ -21,7 +25,7 @@ img {
 }
 
 p {
-    @include fontStyles($fontParagraphs, normal, 18px);
+    @include fontStyles($fontParagraphs, normal, 20px);
     @include textStyles(0.5px, 28px, null, null);
     @include colorStyles(null, $colorOnWhite);
 }
@@ -56,7 +60,7 @@ small {
 
 .banner-text {
     @include marginStyles(5px 5px 5px 150px);
-    @include fontStyles($fontParagraphs, normal, 18px);
+    @include fontStyles($fontParagraphs, normal, 20px);
     @include textStyles(0.2px, 30px, null, null);
 }
 
@@ -101,6 +105,12 @@ small {
 .heading-s {
     @include marginStyles(10px auto);
     @include fontStyles($fontHeadings, normal, 35px);
+    @include textStyles(-0.5px, 40px, null, null);
+}
+
+.heading-t {
+    @include marginStyles(10px auto);
+    @include fontStyles($fontHeadings, normal, 30px);
     @include textStyles(-0.5px, 40px, null, null);
 }
 

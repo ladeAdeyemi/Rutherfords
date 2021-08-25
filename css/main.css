@@ -24,6 +24,10 @@
   transition: 0.3s ease;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: black;
 }
@@ -36,7 +40,7 @@ img {
 p {
   font-family: "Assistant", sans-serif;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 0.5px;
   line-height: 28px;
   color: #525a5a;
@@ -77,7 +81,7 @@ small {
   margin: 5px 5px 5px 150px;
   font-family: "Assistant", sans-serif;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 0.2px;
   line-height: 30px;
 }
@@ -140,6 +144,15 @@ small {
   line-height: 40px;
 }
 
+.heading-t {
+  margin: 10px auto;
+  font-family: "David", serif;
+  font-weight: normal;
+  font-size: 30px;
+  letter-spacing: -0.5px;
+  line-height: 40px;
+}
+
 .heading-xl {
   margin: 10px auto;
   font-family: "David", serif;
@@ -196,7 +209,7 @@ nav#navigation div#nav-links-container a {
   padding: 10px;
   font-family: "Assistant Light", sans-serif;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 1px;
   line-height: auto;
   text-transform: uppercase;
@@ -224,7 +237,7 @@ nav#navigation-collapsed {
 }
 nav#navigation-collapsed div#nav-logo-container {
   padding-top: 0;
-  transition: 0.7s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 nav#navigation-collapsed div#nav-links-container a {
   display: inline-block;
@@ -233,7 +246,7 @@ nav#navigation-collapsed div#nav-links-container a {
   border-radius: 4px;
   font-family: "Assistant Light", sans-serif;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 1px;
   line-height: auto;
   text-transform: uppercase;
@@ -279,7 +292,7 @@ section#craftsmanship p {
   width: 70%;
   font-family: "Assistant", sans-serif;
   font-weight: normal;
-  font-size: 17.5px;
+  font-size: 20px;
   letter-spacing: 0.2px;
   line-height: 30px;
 }
@@ -296,15 +309,10 @@ section#craftsmanship div.card:nth-child(even) {
   position: relative;
   top: 70px;
 }
-section#craftsmanship div.card p {
-  margin: 5px;
-  padding: 5px;
-  width: 100%;
-  font-size: 16px;
-  line-height: 22px;
-  color: #525a5a;
+section#craftsmanship div.card img {
+  border-radius: 8px;
 }
-section#craftsmanship h2.heading-m.pad {
+section#craftsmanship h2.heading-l.pad {
   margin: 150px 0 100px 0;
   padding-right: 20%;
 }
@@ -339,12 +347,12 @@ section#history hr {
   border-bottom: none;
 }
 section#history h2#bottom {
-  margin-top: 250px;
+  margin-top: 300px;
 }
 
 /* Patreons */
 section#patreon {
-  padding: 50px 0 100px 0;
+  padding: 100px 0 150px 0;
   background-color: white;
 }
 section#patreon div.flex-rw {
@@ -352,10 +360,17 @@ section#patreon div.flex-rw {
   align-items: center;
 }
 section#patreon div.flex-rw div.container_txt {
-  width: 40%;
+  width: 45%;
+}
+section#patreon div.flex-rw div.container_txt h2, section#patreon div.flex-rw div.container_txt p {
+  padding: 0 40px;
 }
 section#patreon div.flex-rw div.container_txt h2 {
-  margin: 20px auto;
+  margin: 10px auto;
+}
+section#patreon div.flex-rw div.container_txt hr {
+  margin: 30px auto;
+  width: 85%;
 }
 section#patreon div.flex-rw div.container_txt p {
   letter-spacing: 0.2px;
@@ -364,13 +379,13 @@ section#patreon div.flex-rw div.container_txt p {
 section#patreon div.flex-rw div.container_img {
   justify-content: space-evenly;
   align-items: stretch;
-  padding: 80px 0;
-  width: 60%;
+  width: 55%;
 }
 section#patreon div.flex-rw div.container_img div.card {
   width: 40%;
 }
 section#patreon div.flex-rw div.container_img div.card img {
+  border-radius: 8px;
   width: 100%;
 }
 
@@ -427,14 +442,19 @@ section#study div.container_outer div.container_txt a:hover {
 
 /* Commission */
 section#commission {
-  padding-bottom: 200px;
+  padding-bottom: 50px;
+  background-color: white;
 }
 section#commission div#form-container {
   margin: 20px auto;
 }
-section#commission div#form-container h2, section#commission div#form-container p {
+section#commission div#form-container h2 {
   margin-left: 15%;
   margin-bottom: 20px;
+}
+section#commission div#form-container h2 {
+  padding-top: 120px;
+  color: black;
 }
 section#commission div#form-container form {
   padding: 10px;
@@ -447,16 +467,30 @@ section#commission div#form-container form input, section#commission div#form-co
 }
 section#commission div#form-container form input, section#commission div#form-container form textarea {
   padding: 10px;
-  background-color: black;
-  color: #eee;
+  background-color: white;
+  color: black;
 }
 section#commission div#form-container form input {
   border: none;
-  border-bottom: 1px solid rgba(211, 207, 207, 0.7);
+  border-bottom: 1px solid grey;
+}
+section#commission div#form-container form input:focus {
+  border-bottom: 1px solid black;
+}
+section#commission div#form-container form textarea {
+  border: 1px solid grey;
+}
+section#commission div#form-container form textarea:focus {
+  border: 1px solid black;
 }
 section#commission div#form-container form button {
   padding: 10px;
+  border: none;
+  border-radius: 4px;
+  letter-spacing: 8px;
   text-transform: uppercase;
+  background-color: black;
+  color: white;
 }
 
 /* Footer */
