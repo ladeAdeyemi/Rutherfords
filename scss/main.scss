@@ -177,7 +177,7 @@ section#craftsmanship {
 section#history {
     @include bgImageStyles(url(../images/meese.jpg), no-repeat, center, cover, fixed);
     @include flexContainerStyles(center, center);
-    height: 1500px;
+    height: 1700px;
 
     div.flex-rw {
         @include flexContainerStyles(space-between, stretch);
@@ -212,7 +212,7 @@ section#history {
 
 section#patreon {
 
-    @include paddingStyles(200px 20px 300px 20px);
+    padding: 50px 0 100px 0;
     @include colorStyles($colorMain, null);
 
         div.flex-rw {
@@ -233,7 +233,10 @@ section#patreon {
 
                 div.container_img {
                     @include flexContainerStyles(space-evenly, stretch);
+                    padding: 80px 0;
+                    // border-left: 1px solid lightgrey;
                     width: 60%;
+                    // @include colorStyles(#eee, null);
 
                     div.card {
                         width: 40%;
@@ -259,9 +262,10 @@ section#study {
         div.container_outer {
 
             @include flexContainerStyles(center, center);
+            margin-top: 200px;
             width: 100%;
             position: relative;
-            bottom: 100px;
+            bottom: 300px;
 
                 div.container_txt, div.container_img {
                     @include marginStyles(0);
@@ -282,7 +286,7 @@ section#study {
         
                     @include flexContainerStyles(center, center);
                     @include paddingStyles(50px auto);
-                    padding-bottom: 40px;
+                    padding-bottom: 0;
                     // background-color: $colorMain;
                     // position: relative;
                     // bottom: 200px;
@@ -314,6 +318,51 @@ section#study {
         }
     
 }
+
+/* Commission */
+
+section#commission {
+    padding-bottom: 200px;
+
+        div#form-container {
+            margin: 20px auto;
+
+                h2, p {
+                    margin-left: 15%;
+                    margin-bottom: 20px;
+                }
+
+                form {
+                    padding: 10px;
+
+                        input, button, textarea {
+                            margin: 30px auto;
+                            width: 70%;
+                            font-size: 20px;
+                            outline: none;
+                        }
+
+                        input, textarea {
+                            padding: 10px;
+                            background-color: $colorSecond;
+                            color: #eee;
+                        }
+
+                        input {
+                            border:none;
+                            border-bottom: 1px solid rgba(211, 207, 207, 0.7);
+                        }
+
+                        button {
+                            padding: 10px;
+                            text-transform: uppercase;
+                        }
+                }
+
+        }
+}
+
+
 
 /* Footer */
 

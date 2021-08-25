@@ -318,7 +318,7 @@ section#history {
   background-attachment: fixed;
   justify-content: center;
   align-items: center;
-  height: 1500px;
+  height: 1700px;
 }
 section#history div.flex-rw {
   justify-content: space-between;
@@ -344,7 +344,7 @@ section#history h2#bottom {
 
 /* Patreons */
 section#patreon {
-  padding: 200px 20px 300px 20px;
+  padding: 50px 0 100px 0;
   background-color: white;
 }
 section#patreon div.flex-rw {
@@ -364,6 +364,7 @@ section#patreon div.flex-rw div.container_txt p {
 section#patreon div.flex-rw div.container_img {
   justify-content: space-evenly;
   align-items: stretch;
+  padding: 80px 0;
   width: 60%;
 }
 section#patreon div.flex-rw div.container_img div.card {
@@ -383,9 +384,10 @@ section#study {
 section#study div.container_outer {
   justify-content: center;
   align-items: center;
+  margin-top: 200px;
   width: 100%;
   position: relative;
-  bottom: 100px;
+  bottom: 300px;
 }
 section#study div.container_outer div.container_txt, section#study div.container_outer div.container_img {
   margin: 0;
@@ -398,7 +400,7 @@ section#study div.container_outer div.container_txt {
   justify-content: center;
   align-items: center;
   padding: 50px auto;
-  padding-bottom: 40px;
+  padding-bottom: 0;
 }
 section#study div.container_outer div.container_txt h2 {
   margin: 30px auto;
@@ -421,6 +423,40 @@ section#study div.container_outer div.container_txt a {
 section#study div.container_outer div.container_txt a:hover {
   background-color: white;
   color: black;
+}
+
+/* Commission */
+section#commission {
+  padding-bottom: 200px;
+}
+section#commission div#form-container {
+  margin: 20px auto;
+}
+section#commission div#form-container h2, section#commission div#form-container p {
+  margin-left: 15%;
+  margin-bottom: 20px;
+}
+section#commission div#form-container form {
+  padding: 10px;
+}
+section#commission div#form-container form input, section#commission div#form-container form button, section#commission div#form-container form textarea {
+  margin: 30px auto;
+  width: 70%;
+  font-size: 20px;
+  outline: none;
+}
+section#commission div#form-container form input, section#commission div#form-container form textarea {
+  padding: 10px;
+  background-color: black;
+  color: #eee;
+}
+section#commission div#form-container form input {
+  border: none;
+  border-bottom: 1px solid rgba(211, 207, 207, 0.7);
+}
+section#commission div#form-container form button {
+  padding: 10px;
+  text-transform: uppercase;
 }
 
 /* Footer */
