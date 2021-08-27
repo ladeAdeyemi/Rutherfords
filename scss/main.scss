@@ -11,12 +11,7 @@ nav#navigation {
     @include flexContainerStyles(center, center);
     @include positionStyles(fixed);
     @include widthStyles(100%);
-    // border-bottom: 1px solid rgba(211, 207, 207, 0.3);
     @include colorStyles($colorSecond, null);
-
-        // div#nav-logo-container {
-        //     @include flexContainerStyles(row, wrap, center, center);
-        // }
 
         div#nav-logo-container {
             padding-top: 15px;
@@ -26,8 +21,6 @@ nav#navigation {
         div#nav-links-container {
 
             @include flexContainerStyles(space-between, center);
-            // border-top: 1px solid grey;
-            // border-bottom: 1px solid grey;
         
                 a {
                     @include displayStyles(inline-block);
@@ -58,7 +51,6 @@ nav#navigation-collapsed {
     @include flexContainerStyles(space-around, stretch);
     @include positionStyles(fixed);
     @include widthStyles(100%);
-    // border-bottom: 1px solid rgba(211, 207, 207, 0.3);
     @include colorStyles($colorSecond, null);
 
         div#nav-logo-container {
@@ -120,7 +112,6 @@ section#page-banner {
 /* Craftsmanship  */
 
 section#craftsmanship {
-    // @include bgImageStyles(url(../images/pattern-01.png), repeat-x, center, null, scroll);
     @include paddingStyles(10px 0 40px 0);
     @include colorStyles($colorMain, null);
 
@@ -131,9 +122,7 @@ section#craftsmanship {
 
         p {
             @include marginStyles(10px auto);
-            // margin-bottom: 30px;
             @include widthStyles(70%);
-            @include fontStyles($fontParagraphs, normal, 20px); 
             @include textStyles(0.2px, 30px, null, null);
         }
 
@@ -150,7 +139,6 @@ section#craftsmanship {
                 &:nth-child(even) {
                     position: relative;
                     top: 70px;
-                    // top: 170px;
                 }
 
                 img {
@@ -162,7 +150,6 @@ section#craftsmanship {
         h2.heading-l.pad {
             margin: 150px 0 100px 0;
             padding-right: 20%;
-            // padding-right: 300px;
         }
 
 }
@@ -207,12 +194,25 @@ section#history {
 
 section#patreon {
 
-    padding: 100px 0 150px 0;
+    padding: 100px 0;
     @include colorStyles($colorMain, null);
 
         div.flex-rw {
 
             @include flexContainerStyles(space-evenly, center);
+
+                div.container_img {
+                    @include flexContainerStyles(space-evenly, stretch);
+                    width: 55%;
+
+                    div.card {
+                        width: 40%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
 
                 div.container_txt {
                     width: 45%;
@@ -231,25 +231,7 @@ section#patreon {
                     }
         
                     p {
-                        // padding: 0 20px;
                         @include textStyles(0.2px, 30px, null, null);
-                    }
-                }
-
-                div.container_img {
-                    @include flexContainerStyles(space-evenly, stretch);
-                    // padding: 40px 0;
-                    // border-left: 1px solid lightgrey;
-                    width: 55%;
-                    // @include colorStyles(#eee, null);
-
-                    div.card {
-                        width: 40%;
-
-                        img {
-                            border-radius: 8px;
-                            width: 100%;
-                        }
                     }
                 }
 
@@ -262,6 +244,7 @@ section#patreon {
 section#study {
 
     @include flexContainerStyles(center, center);
+    padding-bottom: 100px;
     background-color: $colorSecond;
     overflow: visible;
 
@@ -270,8 +253,6 @@ section#study {
             @include flexContainerStyles(center, center);
             margin-top: 200px;
             width: 100%;
-            position: relative;
-            bottom: 300px;
 
                 div.container_txt, div.container_img {
                     @include marginStyles(0);
@@ -279,11 +260,8 @@ section#study {
                 }
         
                 div.container_img {
-                    
-                    // @include widthStyles(60%);
         
                     img {
-                        // border-radius: 8px;
                         @include widthStyles(100%);
                     }
         
@@ -294,9 +272,6 @@ section#study {
                     @include flexContainerStyles(center, center);
                     @include paddingStyles(50px auto);
                     padding-bottom: 0;
-                    // background-color: $colorMain;
-                    // position: relative;
-                    // bottom: 200px;
                 
                         h2 {
                             @include marginStyles(30px auto);
@@ -312,6 +287,7 @@ section#study {
                         }
         
                         a {
+                            margin-top: 50px;
                             @include borderStyles(1px solid $colorMain, 0, none);
                             @include colorStyles(null, $colorMain);
                     
@@ -437,10 +413,8 @@ footer {
 
                  div.column {
                      @include displayStyles(inline-block);
-                    //  @include flexContainerStyles(column, wrap, flex-end, flex-start);
                      @include marginStyles(10px 60px);
                      @include paddingStyles(0);
-                    //  @include widthStyles(150px);
 
                         &:nth-child(4) {
                             margin-right: 0;
@@ -457,7 +431,6 @@ footer {
 
                                 &:hover {
                                     opacity: 0.5;
-                                    // text-decoration: underline;
                                 }
 
                                 small {
