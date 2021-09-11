@@ -91,8 +91,8 @@ small {
 
 .banner-headline {
     @include marginStyles(150px 0 20px 150px);
-    @include fontStyles($fontHeadings, normal, 65px);
-    @include textStyles($headlines, 55px, auto, null);
+    @include fontStyles($fontHeadings, normal, 75px);
+    @include textStyles($headlines, 65px, auto, null);
 }
 
 .banner-text {
@@ -153,7 +153,7 @@ small {
 
 .heading-xl {
     @include marginStyles(10px auto);
-    @include fontStyles($fontHeadings, normal, 65px);
+    @include fontStyles($fontHeadings, normal, 62px);
     @include textStyles(-0.8px, 60px, null, null);
 }
 

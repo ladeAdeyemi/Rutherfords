@@ -22,6 +22,7 @@
   font-family: "Assistant", sans-serif;
   text-decoration: none;
   transition: 0.3s ease;
+  list-style: none;
 }
 
 *::before {
@@ -111,9 +112,9 @@ small {
   margin: 150px 0 20px 150px;
   font-family: "David", serif;
   font-weight: normal;
-  font-size: 65px;
+  font-size: 75px;
   letter-spacing: -0.5px;
-  line-height: 55px;
+  line-height: 65px;
   text-transform: auto;
 }
 
@@ -197,7 +198,7 @@ small {
   margin: 10px auto;
   font-family: "David", serif;
   font-weight: normal;
-  font-size: 65px;
+  font-size: 62px;
   letter-spacing: -0.8px;
   line-height: 60px;
 }
@@ -311,12 +312,8 @@ section#page-banner {
   background-attachment: scroll;
   height: 700px;
 }
-section#page-banner div h1 {
-  color: white;
-}
 section#page-banner div p {
   width: 40%;
-  color: #eee;
 }
 
 /* Craftsmanship  */
@@ -350,50 +347,15 @@ section#craftsmanship div.card:nth-child(even) {
 section#craftsmanship div.card img {
   border-radius: 8px;
 }
-section#craftsmanship h2.heading-l.pad {
+section#craftsmanship h2.heading-xl.pad {
   margin: 150px 0 100px 0;
   padding-right: 20%;
 }
 
-/* History Section */
-section#history {
-  background-image: url(../images/meese.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  justify-content: center;
-  align-items: center;
-  height: 1700px;
-}
-section#history div#history-content {
-  min-width: 900px;
-}
-section#history div#history-content div.flex-rw {
-  justify-content: space-between;
-  align-items: stretch;
-  margin: 20px auto;
-  width: 100%;
-}
-section#history div#history-content div.flex-rw span {
-  margin: 0;
-  margin-right: 10px;
-}
-section#history div#history-content div.flex-rw h3 {
-  position: relative;
-  top: 3px;
-}
-section#history div#history-content hr {
-  border: 1px solid white;
-  border-bottom: none;
-}
-section#history div#history-content h2#bottom {
-  margin-top: 300px;
-}
-
 /* Patreons */
 section#patreon {
-  padding: 100px 0;
+  padding: 150px 0;
+  padding-bottom: 100px;
   background-color: white;
 }
 section#patreon div.flex-rw {
@@ -428,6 +390,42 @@ section#patreon div.flex-rw div.container_img div.card {
 }
 section#patreon div.flex-rw div.container_img div.card img {
   width: 100%;
+}
+
+/* History Section */
+section#history {
+  background-image: url(../images/meese.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
+  height: 1700px;
+}
+section#history div#history-content {
+  min-width: 70%;
+}
+section#history div#history-content div.flex-rw {
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 20px auto;
+  width: 100%;
+}
+section#history div#history-content div.flex-rw span {
+  margin: 0;
+  margin-right: 10px;
+}
+section#history div#history-content div.flex-rw h3 {
+  position: relative;
+  top: 3px;
+}
+section#history div#history-content hr {
+  border: 1px solid white;
+  border-bottom: none;
+}
+section#history div#history-content h2#bottom {
+  margin-top: 300px;
 }
 
 /* Case Study */
