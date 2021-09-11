@@ -6,8 +6,6 @@
 
 // If you're finding it hard to figure out why your HTML elements aren't being styled the way you want don't forget to check the other scss modules (particularly the general styles module).
 
-
-
 // UNIVERSAL SELECTOR                           
 
 @mixin universalStyles {
@@ -17,6 +15,7 @@
     font-family: $fontParagraphs;
     text-decoration: none;
     transition: 0.3s ease;
+    list-style: none;
 }
 
 // GRID 
@@ -66,14 +65,14 @@
 @mixin positionStyles($pos) {
 
     @if $pos == fixed {
-    position: $pos; 
-    z-index: 1;
-    top: 0; 
-    left: 0;
+        position: $pos; 
+        z-index: 1;
+        top: 0; 
+        left: 0;
     }
 
     @else {
-    position: $pos; 
+        position: $pos; 
     }
 
 }
@@ -154,15 +153,3 @@
 @mixin transformStyles($trans) {
     transform: $trans;
 }
-
-// ANIMATIONS
-
-// @mixin vendors {
-//     transform: $trans;
-// }
-
-// VENDOR PREFIXES
-
-// @mixin vendors {
-//     transform: $trans;
-// }

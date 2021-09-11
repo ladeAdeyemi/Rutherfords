@@ -13,7 +13,7 @@
 @include displayStyles($disp);
 @include marginStyles($margin); 
 @include paddingStyles($padding); 
-@include positionStyles($pos, $z); 
+@include positionStyles($pos); 
 @include widthStyles($wide); 
 @include heightStyles($high); 
 @include borderStyles($border, $radius, $outline);

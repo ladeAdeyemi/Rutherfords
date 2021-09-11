@@ -5,27 +5,64 @@
 @import "variables";
 @import "mixins";
 
-/* Universal selector, body tag */
+/* Universal selector, html, body and general use tags */
 
 * {
     @include universalStyles;
   }
 
-html {
-      scroll-behavior: smooth;
+*::before {
+    box-sizing: border-box;
   }
   
+*::after {
+    box-sizing: border-box;
+  }
+
+a#top-link {
+    justify-content: center;
+    align-content: center;
+    background-image: url(../images/up.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include paddingStyles(5px); 
+    @include positionStyles(fixed);
+    top: 85%;
+    left: 92%;
+    @include widthStyles(40px); 
+    @include heightStyles(40px);
+    border-radius: 8px;
+    font-family: $fontHeadings;
+    font-size: 2rem;
+    @include colorStyles($colorMain, null);
+    transition: 0.3s ease-in;
+    box-shadow: $boxShadowSpread;
+}
+
+a#top-link:hover {
+    background-image: url(../images/up2.png);
+    background-color: black;
+    border-radius: 50%;
+    box-shadow: none;
+}
+
 body {
-    @include colorStyles(black, null);
+    @include colorStyles($colorSecond, null);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 img {
     display: block;
+    border-radius: 8px;
     @include widthStyles(100%);
 }
 
 p {
-    @include fontStyles($fontParagraphs, normal, 19px);
+    @include fontStyles($fontParagraphs, normal, 18.5px);
     @include textStyles(0.5px, 28px, null, null);
     @include colorStyles(null, $colorOnWhite);
 }
@@ -105,19 +142,19 @@ small {
 .heading-s {
     @include marginStyles(10px auto);
     @include fontStyles($fontHeadings, normal, 35px);
-    @include textStyles(-0.5px, 40px, null, null);
+    @include textStyles(-0.8px, 40px, null, null);
 }
 
 .heading-t {
     @include marginStyles(10px auto);
     @include fontStyles($fontHeadings, normal, 28px);
-    @include textStyles(-0.5px, 40px, null, null);
+    @include textStyles(-0.8px, 40px, null, null);
 }
 
 .heading-xl {
     @include marginStyles(10px auto);
-    @include fontStyles($fontHeadings, normal, 60px);
-    @include textStyles(-0.5px, 60px, null, null);
+    @include fontStyles($fontHeadings, normal, 65px);
+    @include textStyles(-0.8px, 60px, null, null);
 }
 
 .hidden {
@@ -139,6 +176,7 @@ small {
 
 .rule {
     @include displayStyles(block);
+    border: 1px solid $colorMain;
     border-bottom: none;
 }
 

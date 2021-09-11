@@ -14,7 +14,7 @@
   font-family: "Assistant Light";
   font-display: block;
 }
-/* Universal selector, body tag */
+/* Universal selector, html, body and general use tags */
 * {
   margin: 0;
   padding: 0;
@@ -24,23 +24,63 @@
   transition: 0.3s ease;
 }
 
-html {
-  scroll-behavior: smooth;
+*::before {
+  box-sizing: border-box;
+}
+
+*::after {
+  box-sizing: border-box;
+}
+
+a#top-link {
+  justify-content: center;
+  align-content: center;
+  background-image: url(../images/up.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 5px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  top: 85%;
+  left: 92%;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  font-family: "David", serif;
+  font-size: 2rem;
+  background-color: white;
+  transition: 0.3s ease-in;
+  box-shadow: 1px 1px 8px 1px rgba(156, 143, 143, 0.5);
+}
+
+a#top-link:hover {
+  background-image: url(../images/up2.png);
+  background-color: black;
+  border-radius: 50%;
+  box-shadow: none;
 }
 
 body {
   background-color: black;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 img {
   display: block;
+  border-radius: 8px;
   width: 100%;
 }
 
 p {
   font-family: "Assistant", sans-serif;
   font-weight: normal;
-  font-size: 19px;
+  font-size: 18.5px;
   letter-spacing: 0.5px;
   line-height: 28px;
   color: #525a5a;
@@ -140,7 +180,7 @@ small {
   font-family: "David", serif;
   font-weight: normal;
   font-size: 35px;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.8px;
   line-height: 40px;
 }
 
@@ -149,7 +189,7 @@ small {
   font-family: "David", serif;
   font-weight: normal;
   font-size: 28px;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.8px;
   line-height: 40px;
 }
 
@@ -157,8 +197,8 @@ small {
   margin: 10px auto;
   font-family: "David", serif;
   font-weight: normal;
-  font-size: 60px;
-  letter-spacing: -0.5px;
+  font-size: 65px;
+  letter-spacing: -0.8px;
   line-height: 60px;
 }
 
@@ -181,6 +221,7 @@ small {
 
 .rule {
   display: block;
+  border: 1px solid white;
   border-bottom: none;
 }
 
@@ -280,7 +321,7 @@ section#page-banner div p {
 
 /* Craftsmanship  */
 section#craftsmanship {
-  padding: 10px 0 40px 0;
+  padding: 100px 0 40px 0;
   background-color: white;
 }
 section#craftsmanship h2 {
@@ -325,25 +366,28 @@ section#history {
   align-items: center;
   height: 1700px;
 }
-section#history div.flex-rw {
+section#history div#history-content {
+  min-width: 900px;
+}
+section#history div#history-content div.flex-rw {
   justify-content: space-between;
   align-items: stretch;
   margin: 20px auto;
   width: 100%;
 }
-section#history div.flex-rw span {
+section#history div#history-content div.flex-rw span {
   margin: 0;
   margin-right: 10px;
 }
-section#history div.flex-rw h3 {
+section#history div#history-content div.flex-rw h3 {
   position: relative;
   top: 3px;
 }
-section#history hr {
+section#history div#history-content hr {
   border: 1px solid white;
   border-bottom: none;
 }
-section#history h2#bottom {
+section#history div#history-content h2#bottom {
   margin-top: 300px;
 }
 
@@ -356,6 +400,24 @@ section#patreon div.flex-rw {
   justify-content: space-evenly;
   align-items: center;
 }
+section#patreon div.flex-rw div.container_txt {
+  width: 45%;
+}
+section#patreon div.flex-rw div.container_txt h2, section#patreon div.flex-rw div.container_txt p {
+  padding: 0 60px;
+}
+section#patreon div.flex-rw div.container_txt h2 {
+  margin: 10px auto;
+  margin-bottom: 20px;
+}
+section#patreon div.flex-rw div.container_txt hr {
+  margin: 30px auto;
+  width: 85%;
+}
+section#patreon div.flex-rw div.container_txt p {
+  letter-spacing: 0.2px;
+  line-height: 30px;
+}
 section#patreon div.flex-rw div.container_img {
   justify-content: space-evenly;
   align-items: stretch;
@@ -366,23 +428,6 @@ section#patreon div.flex-rw div.container_img div.card {
 }
 section#patreon div.flex-rw div.container_img div.card img {
   width: 100%;
-}
-section#patreon div.flex-rw div.container_txt {
-  width: 45%;
-}
-section#patreon div.flex-rw div.container_txt h2, section#patreon div.flex-rw div.container_txt p {
-  padding: 0 40px;
-}
-section#patreon div.flex-rw div.container_txt h2 {
-  margin: 10px auto;
-}
-section#patreon div.flex-rw div.container_txt hr {
-  margin: 30px auto;
-  width: 85%;
-}
-section#patreon div.flex-rw div.container_txt p {
-  letter-spacing: 0.2px;
-  line-height: 30px;
 }
 
 /* Case Study */

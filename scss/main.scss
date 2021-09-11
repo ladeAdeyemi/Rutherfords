@@ -112,7 +112,7 @@ section#page-banner {
 /* Craftsmanship  */
 
 section#craftsmanship {
-    @include paddingStyles(10px 0 40px 0);
+    @include paddingStyles(100px 0 40px 0);
     @include colorStyles($colorMain, null);
 
         h2 {
@@ -161,31 +161,36 @@ section#history {
     @include flexContainerStyles(center, center);
     height: 1700px;
 
-    div.flex-rw {
-        @include flexContainerStyles(space-between, stretch);
-        @include marginStyles(20px auto);
-        width: 100%;
+    div#history-content {
 
-            span {
-                margin: 0;
-                margin-right: 10px; 
+        min-width: 900px;
 
-            }
-
-            h3 {
-                position: relative;
-                top: 3px; 
-            }
-
-    }
-
-    hr {
-        border: 1px solid white;
-        border-bottom: none;
-    }
-
-    h2#bottom {
-        margin-top: 300px;
+        div.flex-rw {
+            @include flexContainerStyles(space-between, stretch);
+            @include marginStyles(20px auto);
+            width: 100%;
+    
+                span {
+                    margin: 0;
+                    margin-right: 10px; 
+    
+                }
+    
+                h3 {
+                    position: relative;
+                    top: 3px; 
+                }
+    
+        }
+    
+        hr {
+            border: 1px solid white;
+            border-bottom: none;
+        }
+    
+        h2#bottom {
+            margin-top: 300px;
+        }
     }
 
 }
@@ -193,14 +198,34 @@ section#history {
 /* Patreons */
 
 section#patreon {
-
     padding: 100px 0;
     @include colorStyles($colorMain, null);
 
         div.flex-rw {
-
             @include flexContainerStyles(space-evenly, center);
+            
+                div.container_txt {
+                    width: 45%;
 
+                    h2, p {
+                        padding: 0 60px;
+                    }
+
+                    h2 {
+                        margin: 10px auto;
+                        margin-bottom: 20px;
+                    } 
+                    
+                    hr {
+                        margin: 30px auto;
+                        width: 85%;
+                    }
+        
+                    p {
+                        @include textStyles(0.2px, 30px, null, null);
+                    }
+                }
+                
                 div.container_img {
                     @include flexContainerStyles(space-evenly, stretch);
                     width: 55%;
@@ -214,27 +239,6 @@ section#patreon {
                     }
                 }
 
-                div.container_txt {
-                    width: 45%;
-
-                    h2, p {
-                        padding: 0 40px;
-                    }
-
-                    h2 {
-                        margin: 10px auto;
-                    } 
-                    
-                    hr {
-                        margin: 30px auto;
-                        width: 85%;
-                    }
-        
-                    p {
-                        @include textStyles(0.2px, 30px, null, null);
-                    }
-                }
-
         }
 
 }
@@ -242,7 +246,6 @@ section#patreon {
 /* Case Study */
 
 section#study {
-
     @include flexContainerStyles(center, center);
     padding-bottom: 100px;
     background-color: $colorSecond;
@@ -404,7 +407,6 @@ footer {
                                 a {
                                     display: inline-block;
                                     margin: 40px;
-
                                 }
 
                         }
