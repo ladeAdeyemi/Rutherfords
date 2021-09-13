@@ -14,7 +14,7 @@ window.addEventListener('scroll', revealTopLink);
 
 function changeNavId () {
 
-    if (window.scrollY >= 500) {
+    if (window.scrollY >= 500 && window.innerWidth >= 918) {
 
         navBar.id = 'navigation-collapsed'
 

@@ -45,21 +45,18 @@ a#top-link {
   z-index: 1;
   top: 0;
   left: 0;
-  top: 85%;
-  left: 92%;
+  top: 89%;
+  left: 94%;
   width: 40px;
   height: 40px;
-  border-radius: 8px;
-  font-family: "David", serif;
-  font-size: 2rem;
   background-color: white;
   transition: 0.3s ease-in;
-  box-shadow: 1px 1px 8px 1px rgba(156, 143, 143, 0.5);
+  box-shadow: 1px 1px 2px rgba(156, 143, 143, 0.5);
 }
 
 a#top-link:hover {
   background-image: url(../images/up2.png);
-  background-color: black;
+  background-color: goldenrod;
   border-radius: 50%;
   box-shadow: none;
 }
@@ -84,7 +81,6 @@ p {
   font-size: 18.5px;
   letter-spacing: 0.5px;
   line-height: 28px;
-  color: #525a5a;
 }
 
 small {
@@ -239,7 +235,16 @@ nav#navigation {
 }
 nav#navigation div#nav-logo-container {
   padding-top: 15px;
+  position: relative;
   transition: 0.7s ease-in-out;
+}
+nav#navigation div#nav-logo-container::after {
+  content: "Est. 1781";
+  position: absolute;
+  top: 38%;
+  left: 100%;
+  font-size: 11px;
+  color: goldenrod;
 }
 nav#navigation div#nav-links-container {
   justify-content: space-between;
@@ -257,11 +262,8 @@ nav#navigation div#nav-links-container a {
   text-transform: uppercase;
   color: white;
 }
-nav#navigation div#nav-links-container a sup {
-  color: red;
-}
 nav#navigation div#nav-links-container a:hover {
-  opacity: 0.3;
+  color: goldenrod;
 }
 
 /* Collapsed Navigation Bar (via JavaScript) */
@@ -279,7 +281,16 @@ nav#navigation-collapsed {
 }
 nav#navigation-collapsed div#nav-logo-container {
   padding-top: 0;
+  position: relative;
   transition: 0.5s ease-in-out;
+}
+nav#navigation-collapsed div#nav-logo-container::after {
+  content: "Est. 1781";
+  position: absolute;
+  top: 15%;
+  left: 100%;
+  font-size: 11px;
+  color: goldenrod;
 }
 nav#navigation-collapsed div#nav-links-container a {
   display: inline-block;
@@ -294,11 +305,8 @@ nav#navigation-collapsed div#nav-links-container a {
   text-transform: uppercase;
   color: white;
 }
-nav#navigation-collapsed div#nav-links-container a sup {
-  color: red;
-}
 nav#navigation-collapsed div#nav-links-container a:hover {
-  opacity: 0.3;
+  color: goldenrod;
 }
 
 /* Page Banner Section */
@@ -318,7 +326,7 @@ section#page-banner div p {
 
 /* Craftsmanship  */
 section#craftsmanship {
-  padding: 100px 0 40px 0;
+  padding: 20px 0;
   background-color: white;
 }
 section#craftsmanship h2 {
@@ -347,20 +355,19 @@ section#craftsmanship div.card:nth-child(even) {
 section#craftsmanship div.card img {
   border-radius: 8px;
 }
-section#craftsmanship h2.heading-xl.pad {
-  margin: 150px 0 100px 0;
+section#craftsmanship h2.heading-l.pad {
+  margin: 150px 0 20px 0;
   padding-right: 20%;
 }
 
 /* Patreons */
 section#patreon {
-  padding: 150px 0;
-  padding-bottom: 100px;
+  padding: 100px 0;
   background-color: white;
 }
 section#patreon div.flex-rw {
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
 }
 section#patreon div.flex-rw div.container_txt {
   width: 45%;
@@ -531,6 +538,10 @@ section#commission div#form-container form button {
   background-color: black;
   color: white;
 }
+section#commission div#form-container form button:hover {
+  cursor: pointer;
+  background-color: goldenrod;
+}
 
 /* Footer */
 footer {
@@ -556,7 +567,6 @@ footer nav#footer-nav div#social div#copyright p {
   font-size: 12px;
   letter-spacing: 0.5px;
   line-height: inherit;
-  color: #eee;
   align-self: center;
 }
 footer nav#footer-nav div#social div.social-media-container {

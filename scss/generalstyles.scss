@@ -28,13 +28,10 @@ a#top-link {
     background-size: contain;
     @include paddingStyles(5px); 
     @include positionStyles(fixed);
-    top: 85%;
-    left: 92%;
+    top: 89%;
+    left: 94%;
     @include widthStyles(40px); 
     @include heightStyles(40px);
-    border-radius: 8px;
-    font-family: $fontHeadings;
-    font-size: 2rem;
     @include colorStyles($colorMain, null);
     transition: 0.3s ease-in;
     box-shadow: $boxShadowSpread;
@@ -42,7 +39,7 @@ a#top-link {
 
 a#top-link:hover {
     background-image: url(../images/up2.png);
-    background-color: black;
+    @include colorStyles($colorThird, null);
     border-radius: 50%;
     box-shadow: none;
 }
@@ -64,7 +61,7 @@ img {
 p {
     @include fontStyles($fontParagraphs, normal, 18.5px);
     @include textStyles(0.5px, 28px, null, null);
-    @include colorStyles(null, $colorOnWhite);
+    // @include colorStyles(null, $colorOnWhite);
 }
 
 small {

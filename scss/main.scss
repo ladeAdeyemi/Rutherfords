@@ -15,7 +15,17 @@ nav#navigation {
 
         div#nav-logo-container {
             padding-top: 15px;
+            position: relative;
             @include transitionStyles(0.7s ease-in-out);
+        }
+
+        div#nav-logo-container::after {
+            content: 'Est. 1781';
+            position: absolute;
+            top: 38%;
+            left: 100%;
+            font-size: 11px;
+            color: $colorThird;
         }
 
         div#nav-links-container {
@@ -30,12 +40,9 @@ nav#navigation {
                     @include textStyles(1px, auto, uppercase, null);
                     @include colorStyles(null, $colorMain);
 
-                        sup {
-                            @include colorStyles(null, $colorThird);
-                        }
-
                         &:hover {
-                            opacity: 0.3;
+                            @include colorStyles(null, $colorThird);
+                            // opacity: 0.3;
                         }
                 }
 
@@ -55,7 +62,17 @@ nav#navigation-collapsed {
 
         div#nav-logo-container {
             padding-top: 0;
+            position: relative;
             @include transitionStyles(0.5s ease-in-out);
+        }
+
+        div#nav-logo-container::after {
+            content: 'Est. 1781';
+            position: absolute;
+            top: 15%;
+            left: 100%;
+            font-size: 11px;
+            color:$colorThird;
         }
 
         div#nav-links-container {
@@ -69,12 +86,9 @@ nav#navigation-collapsed {
                     @include textStyles(1px, auto, uppercase, null);
                     @include colorStyles(null, $colorMain);
 
-                        sup {
-                            @include colorStyles(null, $colorThird);
-                        }
-
                         &:hover {
-                            opacity: 0.3;
+                            // opacity: 0.3;
+                            @include colorStyles(null, $colorThird);
                         }
                 }
 
@@ -94,11 +108,8 @@ section#page-banner {
 
     div {
 
-        // @include gridItemStyles($col, $row);
-
             p {
                 width: 40%;
-                // @include colorStyles(null, $colorOnBlack);
             }
 
     }
@@ -108,7 +119,7 @@ section#page-banner {
 /* Craftsmanship  */
 
 section#craftsmanship {
-    @include paddingStyles(100px 0 40px 0);
+    @include paddingStyles(20px 0);
     @include colorStyles($colorMain, null);
 
         h2 {
@@ -143,8 +154,8 @@ section#craftsmanship {
 
         }
 
-        h2.heading-xl.pad {
-            margin: 150px 0 100px 0;
+        h2.heading-l.pad {
+            margin: 150px 0 20px 0;
             padding-right: 20%;
         }
 
@@ -153,12 +164,12 @@ section#craftsmanship {
 /* Patreons */
 
 section#patreon {
-    padding: 150px 0;
-    padding-bottom: 100px;
+    padding: 100px 0;
+    // padding-bottom: 150px;
     @include colorStyles($colorMain, null);
 
         div.flex-rw {
-            @include flexContainerStyles(space-evenly, center);
+            @include flexContainerStyles(space-evenly, flex-start);
             
                 div.container_txt {
                     width: 45%;
@@ -292,6 +303,7 @@ section#study {
                             @include colorStyles(null, $colorMain);
                     
                                 &:hover {
+                                    // @include colorStyles($colorThird, $colorMain);
                                     @include colorStyles($colorMain, $colorSecond);
                                 }
                         }
@@ -360,6 +372,10 @@ section#commission {
                             text-transform: uppercase;
                             background-color: $colorSecond;
                             color: $colorMain;
+                            &:hover {
+                                cursor: pointer;
+                                background-color: $colorThird;
+                            }
                             
                         }
                 }
@@ -391,7 +407,6 @@ footer {
                                 @include marginStyles(2px 0 0 0); 
                                 @include fontStyles($fontNavLinks, normal, 12px);
                                 @include textStyles(0.5px, inherit, null, null);
-                                @include colorStyles(null, $colorOnBlack); 
                                 align-self: center;
                             }
         
@@ -492,13 +507,9 @@ footer {
             }
 
         }
-}
-
-
+    }
 
 }
-
-
 
 @media screen and (max-width: 877px) {
 
