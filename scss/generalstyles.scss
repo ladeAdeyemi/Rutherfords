@@ -167,6 +167,10 @@ small {
     @include colorStyles(null, $colorOnBlack);
 }
 
+.on-black-full {
+    @include colorStyles(null, $colorMain);
+}
+
 .on-white {
     @include colorStyles(null, $colorOnWhite);
 }

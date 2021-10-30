@@ -134,6 +134,7 @@ section#page-banner {
 
 section#craftsmanship {
     @include paddingStyles(20px 0);
+    padding-bottom: 80px;
     @include colorStyles($colorMain, null);
 
         h2 {
@@ -143,7 +144,8 @@ section#craftsmanship {
 
         p {
             @include marginStyles(10px auto);
-            margin-bottom: 30px;
+            margin-bottom: 80px;
+            // margin-bottom: 30px;
             @include widthStyles(70%);
             @include textStyles(0.2px, 30px, null, null);
         }
@@ -151,12 +153,13 @@ section#craftsmanship {
         div#craftsmanheader {
             margin: 5px auto;
             margin-bottom: 0;
-            padding: 40px;
+            // padding: 40px;
             width: 90%;
 
                 div.craft-inner {
                     @include flexContainerStyles(space-between, center);
-                    margin-bottom: 80px;
+                    // margin-bottom: 80px;
+                    padding: 0 40px;
 
                         &:nth-child(even) {
                             flex-direction: row-reverse;
@@ -167,13 +170,13 @@ section#craftsmanship {
                         // }
 
                         div.container_img {
-                            width:47%;
+                            width:60%;
                         }
         
                         div.container_txt {
-                            padding: 40px 10px;
-                            width: 47%;
-                            // @include borderStyles(1px solid $colorThird, 0, none);
+                            padding: 20px 10px;
+                            width: 40%;
+                            @include borderStyles(1px solid $colorThird, 0, none);
         
                                 h2 {
                                     margin-top: 10px;
@@ -184,6 +187,7 @@ section#craftsmanship {
                                 }
 
                                 p {
+                                    margin-bottom: 0;
                                     width: 90%;
                                 }
                     }
@@ -200,7 +204,7 @@ section#craftsmanship {
             @include marginStyles(15px);
             @include paddingStyles(0);
             // @include paddingStyles(30px);
-            @include widthStyles(20%);
+            @include widthStyles(20.5%);
             @include borderStyles(1px solid $colorThird, null, null); 
             @include colorStyles(null, null);
 
