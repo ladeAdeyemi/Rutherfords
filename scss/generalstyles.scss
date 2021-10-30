@@ -39,7 +39,8 @@ a#top-link {
 
 a#top-link:hover {
     background-image: url(../images/up2.png);
-    @include colorStyles($colorThird, null);
+    @include colorStyles($colorSecond, null);
+    border: 1px solid $colorMain;
     border-radius: 50%;
     box-shadow: none;
 }
@@ -54,14 +55,13 @@ html {
 
 img {
     display: block;
-    border-radius: 8px;
+    // border-radius: 8px;
     @include widthStyles(100%);
 }
 
 p {
     @include fontStyles($fontParagraphs, normal, 18.5px);
     @include textStyles(0.5px, 28px, null, null);
-    // @include colorStyles(null, $colorOnWhite);
 }
 
 small {
@@ -87,7 +87,7 @@ small {
 }
 
 .banner-headline {
-    @include marginStyles(150px 0 20px 150px);
+    @include marginStyles(190px 0 20px 150px);
     @include fontStyles($fontHeadings, normal, 75px);
     @include textStyles($headlines, 65px, auto, null);
 }
@@ -173,7 +173,6 @@ small {
 
 .rule {
     @include displayStyles(block);
-    border: 1px solid $colorMain;
+    border: 1px solid grey;
     border-bottom: none;
 }
-
