@@ -11,7 +11,7 @@ const historySection = document.querySelector('#history');
 window.addEventListener('scroll', changeNavId);
 window.addEventListener('scroll', revealTopLink);
 
-// Do not delete the below code.
+// Do not delete the comment below.
 
 // window.addEventListener('scroll', changeBgImg);
 
@@ -32,6 +32,8 @@ function changeNavId () {
 }
 
 function revealTopLink () {
+
+    if (topLink.classList.contains('hidden') && window.scrollY < 1000) return;
 
     if (window.scrollY >= 1000) {
 

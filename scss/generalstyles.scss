@@ -1,6 +1,6 @@
                                         // +=+=+=+=+=+ GENERAL STYLES +=+=+=+=+=+ //
 
-// These classes are meant to be shared across all your projects. If you're finding it hard to figure out why your HTML elements aren't being styled the way you want don't forget to check the other modules.
+// These classes are meant to be shared across all your projects. If you're finding it hard to figure out why your HTML elements aren't being styled the way you want, don't forget to check the other modules.
 
 @import "variables";
 @import "mixins";
@@ -32,9 +32,11 @@ a#top-link {
     left: 94%;
     @include widthStyles(40px); 
     @include heightStyles(40px);
+    border: 1px solid $colorThird;
+    border-radius: 4px;
     @include colorStyles($colorMain, null);
     transition: 0.3s ease-in;
-    box-shadow: $boxShadowSpread;
+    // box-shadow: $boxShadowSpread;
 }
 
 a#top-link:hover {
@@ -101,7 +103,7 @@ small {
 .cta {
     @include displayStyles(block);
     @include marginStyles(10px auto);
-    @include paddingStyles(10px); 
+    @include paddingStyles(15px); 
     @include fontStyles($fontNavLinks, normal, 13.5px);
     @include textStyles(1px, 25px, uppercase, none);
 }
@@ -133,17 +135,14 @@ small {
 
 .heading-m {
     @include fontStyles($fontHeadings, normal, 50px); 
-    @include textStyles($headlines, inherit, null, null);
-}
+    @include textStyles(-0.8px, 50px, null, null);}
 
 .heading-s {
-    @include marginStyles(10px auto);
     @include fontStyles($fontHeadings, normal, 35px);
     @include textStyles(-0.8px, 40px, null, null);
 }
 
 .heading-t {
-    @include marginStyles(10px auto);
     @include fontStyles($fontHeadings, normal, 28px);
     @include textStyles(-0.8px, 40px, null, null);
 }

@@ -118,7 +118,8 @@ section#page-banner {
                 display: inline-block;
                 margin-top: 30px;
                 margin-left: 150px;
-                @include borderStyles(1px solid $colorMain, 0, none);
+                // text-align: center;
+                @include borderStyles(1px solid $colorMain, 4px, none);
                 @include colorStyles(null, $colorMain);
         
                     &:hover {
@@ -138,16 +139,26 @@ section#craftsmanship {
     @include colorStyles($colorMain, null);
 
         h2 {
-            @include marginStyles(100px 0 20px 0); 
+            @include marginStyles(70px 0 20px 0); 
             @include colorStyles(null, $colorSecond); 
         }
 
         p {
             @include marginStyles(10px auto);
-            margin-bottom: 80px;
-            // margin-bottom: 30px;
+            // margin-bottom: 50px;
+            margin-bottom: 40px;
             @include widthStyles(70%);
             @include textStyles(0.2px, 30px, null, null);
+        }
+
+        div.main_pic {
+            margin: 0 auto;
+            width: 90%;
+            @include borderStyles(1px solid $colorThird, 8px, null);
+
+                img {
+                    border-radius: 8px;
+                }
         }
 
         div#craftsmanheader {
@@ -157,26 +168,30 @@ section#craftsmanship {
             width: 90%;
 
                 div.craft-inner {
-                    @include flexContainerStyles(space-between, center);
+                    @include flexContainerStyles(space-evenly, center);
                     // margin-bottom: 80px;
-                    padding: 0 40px;
+                    // padding: 0 40px;
+                    // border-bottom: 1px solid $colorThird;
 
                         &:nth-child(even) {
                             flex-direction: row-reverse;
                         }
 
-                        // &:nth-child(3) {
-                        //     margin-bottom: 20px;
-                        // }
+                        &:nth-child(3) {
+                            margin-bottom: 60px;
+                            // border-bottom: 0;
+                        }
 
                         div.container_img {
-                            width:60%;
+                            width:50%;
                         }
         
                         div.container_txt {
-                            padding: 20px 10px;
-                            width: 40%;
-                            @include borderStyles(1px solid $colorThird, 0, none);
+                            padding: 80px 10px;
+                            width: 50%;
+                            @include borderStyles(1px solid $colorThird, 4px, none);
+                            // background: #f5f5f5;
+                            // box-shadow: 2px 2px 18px $colorThird;
         
                                 h2 {
                                     margin-top: 10px;
@@ -205,12 +220,12 @@ section#craftsmanship {
             @include paddingStyles(0);
             // @include paddingStyles(30px);
             @include widthStyles(20.5%);
-            @include borderStyles(1px solid $colorThird, null, null); 
+            @include borderStyles(1px solid $colorThird, 4px, null); 
             @include colorStyles(null, null);
 
-                &:hover {
-                    box-shadow: $boxShadowDark;
-                }
+                // &:hover {
+                //     box-shadow: $boxShadowDark;
+                // }
             // box-shadow: $boxShadowDark;
             
                 // &:nth-child(even) {
@@ -221,6 +236,10 @@ section#craftsmanship {
                 // img {
                 //   border-radius: 8px;
                 // }
+
+                h3 {
+                    @include marginStyles(2px auto);
+                }
 
                 hr {
                     width: 90%;
@@ -279,7 +298,7 @@ section#patreon {
 
                         margin: 10px;
                         width: 40%;
-                        @include borderStyles(1px solid $colorThird, 0, none);
+                        @include borderStyles(1px solid $colorFourth, 4px, none);
 
                         img {
                             width: 100%;
@@ -295,7 +314,7 @@ section#patreon {
 /* History Section */
 
 section#history {
-    @include bgImageStyles(url(../images/beartaxidermy.jpg), no-repeat, center, cover, fixed);
+    @include bgImageStyles(url(../images/owl.jpg), no-repeat, center, cover, fixed);
     @include flexContainerStyles(center, center);
     height: 1700px;
 
@@ -336,7 +355,8 @@ section#history {
 /* Case Study */
 
 section#study {
-    @include flexContainerStyles(center, center);
+    // @include flexContainerStyles(center, center);
+    // padding-bottom: 0pxs;
     padding-bottom: 100px;
     background-color: $colorSecond;
     overflow: visible;
@@ -346,6 +366,9 @@ section#study {
             @include flexContainerStyles(center, center);
             margin-top: 200px;
             width: 100%;
+            // @include borderStyles(1px solid $colorFourth, 0, none);
+            // position: relative;
+            // bottom: 300px;
 
                 div.container_txt, div.container_img {
                     @include marginStyles(0);
@@ -367,13 +390,14 @@ section#study {
                     padding-bottom: 0;
                 
                         h2 {
-                            @include marginStyles(30px auto);
+                            @include marginStyles(50px auto);
                             margin-bottom: 0;
                             @include colorStyles(null, $colorMain);
                         }
 
                         p {
                             @include marginStyles(10px auto);
+                            margin-top: 30px;
                             @include paddingStyles(0 30px);
                             width: 100%;
                             @include textStyles(0.2px, 30px, null, null);
@@ -381,7 +405,8 @@ section#study {
         
                         a {
                             margin-top: 50px;
-                            @include borderStyles(1px solid $colorMain, 0, none);
+                            padding: 15px;
+                            @include borderStyles(1px solid $colorMain, 4px, none);
                             @include colorStyles(null, $colorMain);
                     
                                 &:hover {
@@ -432,30 +457,31 @@ section#commission {
 
                         input {
                             border:none;
-                            border-bottom: 1px solid grey;
+                            border-bottom: 1px solid $colorThird;
                                 &:focus {
                                     border-bottom: 1px solid $colorSecond;
                                 }
                         }
 
                         textarea {
-                            border: 1px solid grey;
+                            border: 1px solid $colorThird;
+                            border-radius: 4px;
                             &:focus {
                                 border: 1px solid $colorSecond;
                             }
                         }
 
                         button {
-                            padding: 10px;
+                            padding: 20px;
                             border: none;
-                            // border-radius: 4px;
+                            border-radius: 4px;
                             letter-spacing: 8px;
                             text-transform: uppercase;
                             background-color: $colorSecond;
                             color: $colorMain;
                             &:hover {
                                 cursor: pointer;
-                                background-color: $colorThird;
+                                background-color: $colorFourth;
                             }
                             
                         }
@@ -469,7 +495,7 @@ section#commission {
 /* Footer */
 
 footer {
-    @include paddingStyles(50px 0 80px 0);
+    @include paddingStyles(50px 0 60px 0);
     @include colorStyles($colorSecond, $colorMain);
     border-top: 1px solid rgba(211, 207, 207, 0.2);
 
@@ -549,6 +575,28 @@ footer {
         
                  }
                  
+        }
+
+        div#disclaimer {
+            margin: 0 auto;
+            margin-top: 80px;
+            width: 50%;
+
+
+                p {
+                    padding: 15px;
+                    display: block;
+                    font-size: 11px;
+                    text-align: center;
+                    color: $colorThird;
+                    line-height: 16px;
+                    border: 1px solid $colorThird;
+                    border-radius: 4px;
+                }
+                a {
+                    color: white;
+                    // text-decoration: underline;
+                }
         }
 
 }
