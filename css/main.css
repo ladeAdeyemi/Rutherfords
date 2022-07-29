@@ -106,7 +106,7 @@ small {
 }
 
 .banner-headline {
-  margin: 190px 0 20px 150px;
+  margin: 150px 0 20px 0px;
   font-family: "David", serif;
   font-weight: normal;
   font-size: 75px;
@@ -116,7 +116,7 @@ small {
 }
 
 .banner-text {
-  margin: 5px 5px 5px 150px;
+  margin: 5px 0px 5px 0px;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
   font-size: 19px;
@@ -322,17 +322,20 @@ section#page-banner {
   background-attachment: scroll;
   height: 700px;
 }
+section#page-banner div.banner {
+  width: 60%;
+}
 section#page-banner div.banner h1 {
   color: white;
 }
 section#page-banner div.banner p {
-  width: 40%;
+  width: 100%;
 }
 section#page-banner div.banner a {
-  display: inline-block;
   margin-top: 30px;
-  margin-left: 150px;
-  border: 1px solid white;
+  width: 35%;
+  text-align: center;
+  border: 2px solid white;
   border-radius: 4px;
   outline: none;
   color: white;
@@ -355,7 +358,7 @@ section#craftsmanship h2 {
 section#craftsmanship p {
   margin: 10px auto;
   margin-bottom: 40px;
-  width: 70%;
+  width: 50%;
   letter-spacing: 0.2px;
   line-height: 30px;
 }
@@ -510,14 +513,13 @@ section#history div#history-content h2#bottom {
 
 /* Case Study */
 section#study {
-  padding-bottom: 100px;
+  padding-bottom: 80px;
   background-color: black;
   overflow: visible;
 }
 section#study div.container_outer {
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
   width: 100%;
 }
 section#study div.container_outer div.container_txt, section#study div.container_outer div.container_img {
@@ -547,9 +549,9 @@ section#study div.container_outer div.container_txt p {
   line-height: 30px;
 }
 section#study div.container_outer div.container_txt a {
-  margin-top: 50px;
+  margin-top: 30px;
   padding: 15px;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 4px;
   outline: none;
   color: white;
@@ -570,8 +572,6 @@ section#commission div#form-container {
 section#commission div#form-container h2 {
   margin-left: 15%;
   margin-bottom: 20px;
-}
-section#commission div#form-container h2 {
   padding-top: 120px;
   color: black;
 }
@@ -619,7 +619,7 @@ section#commission div#form-container form button:hover {
 
 /* Footer */
 footer {
-  padding: 50px 0 60px 0;
+  padding: 100px 0 20px 0;
   background-color: black;
   color: white;
   border-top: 1px solid rgba(211, 207, 207, 0.2);
@@ -691,7 +691,7 @@ footer nav#footer-nav div.column a span {
 footer div#disclaimer {
   margin: 0 auto;
   margin-top: 80px;
-  width: 50%;
+  width: 70%;
 }
 footer div#disclaimer p {
   padding: 15px;
@@ -700,11 +700,13 @@ footer div#disclaimer p {
   text-align: center;
   color: #c7c1c1;
   line-height: 16px;
-  border: 1px solid #c7c1c1;
   border-radius: 4px;
 }
 footer div#disclaimer a {
   color: white;
+}
+footer div#disclaimer a:hover {
+  text-decoration: underline;
 }
 
 /***** MEDIA QUERIES *****/

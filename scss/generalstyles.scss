@@ -89,13 +89,13 @@ small {
 }
 
 .banner-headline {
-    @include marginStyles(190px 0 20px 150px);
+    @include marginStyles(150px 0 20px 0px);
     @include fontStyles($fontHeadings, normal, 75px);
     @include textStyles($headlines, 65px, auto, null);
 }
 
 .banner-text {
-    @include marginStyles(5px 5px 5px 150px);
+    @include marginStyles(5px 0px 5px 0px);
     @include fontStyles($fontParagraphs, normal, 19px);
     @include textStyles(0.2px, 30px, null, null);
 }

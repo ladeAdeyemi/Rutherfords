@@ -106,20 +106,23 @@ section#page-banner {
 
     div.banner {
 
+        width: 60%;
+
             h1 {
                 @include colorStyles(null, $colorMain);
             }
 
             p {
-                width: 40%;
+                width: 100%;
             }
 
             a {
-                display: inline-block;
+                // display: inline-block;
                 margin-top: 30px;
-                margin-left: 150px;
-                // text-align: center;
-                @include borderStyles(1px solid $colorMain, 4px, none);
+                // margin-left: 150px;
+                width: 35%;
+                text-align: center;
+                @include borderStyles(2px solid $colorMain, 4px, none);
                 @include colorStyles(null, $colorMain);
         
                     &:hover {
@@ -147,7 +150,7 @@ section#craftsmanship {
             @include marginStyles(10px auto);
             // margin-bottom: 50px;
             margin-bottom: 40px;
-            @include widthStyles(70%);
+            @include widthStyles(50%);
             @include textStyles(0.2px, 30px, null, null);
         }
 
@@ -357,14 +360,14 @@ section#history {
 section#study {
     // @include flexContainerStyles(center, center);
     // padding-bottom: 0pxs;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
     background-color: $colorSecond;
     overflow: visible;
 
         div.container_outer {
 
             @include flexContainerStyles(center, center);
-            margin-top: 200px;
+            // margin-top: 10px;
             width: 100%;
             // @include borderStyles(1px solid $colorFourth, 0, none);
             // position: relative;
@@ -404,9 +407,9 @@ section#study {
                         }
         
                         a {
-                            margin-top: 50px;
+                            margin-top: 30px;
                             padding: 15px;
-                            @include borderStyles(1px solid $colorMain, 4px, none);
+                            @include borderStyles(2px solid $colorMain, 4px, none);
                             @include colorStyles(null, $colorMain);
                     
                                 &:hover {
@@ -432,9 +435,6 @@ section#commission {
                 h2 {
                     margin-left: 15%;
                     margin-bottom: 20px;
-                }
-
-                h2 {
                     padding-top: 120px;
                     @include colorStyles(null, $colorSecond);
                 }
@@ -495,7 +495,7 @@ section#commission {
 /* Footer */
 
 footer {
-    @include paddingStyles(50px 0 60px 0);
+    @include paddingStyles(100px 0 20px 0);
     @include colorStyles($colorSecond, $colorMain);
     border-top: 1px solid rgba(211, 207, 207, 0.2);
 
@@ -580,7 +580,7 @@ footer {
         div#disclaimer {
             margin: 0 auto;
             margin-top: 80px;
-            width: 50%;
+            width: 70%;
 
 
                 p {
@@ -590,12 +590,15 @@ footer {
                     text-align: center;
                     color: $colorThird;
                     line-height: 16px;
-                    border: 1px solid $colorThird;
+                    // border: 1px solid $colorThird;
                     border-radius: 4px;
                 }
                 a {
                     color: white;
                     // text-decoration: underline;
+                        &:hover {
+                            text-decoration: underline;
+                        }
                 }
         }
 
